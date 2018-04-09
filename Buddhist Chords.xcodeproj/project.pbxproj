@@ -1,0 +1,864 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59CB22EFD3190E8B883FAA01 /* Pods_Buddhist_ChordsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450902C7AD9CD4E69817CE8C /* Pods_Buddhist_ChordsTests.framework */; };
+		659D3AB3207BB051001EB2F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659D3AB2207BB051001EB2F8 /* AppDelegate.swift */; };
+		659D3AB5207BB051001EB2F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659D3AB4207BB051001EB2F8 /* ViewController.swift */; };
+		659D3AB8207BB051001EB2F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659D3AB6207BB051001EB2F8 /* Main.storyboard */; };
+		659D3ABA207BB052001EB2F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659D3AB9207BB052001EB2F8 /* Assets.xcassets */; };
+		659D3ABD207BB052001EB2F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659D3ABB207BB052001EB2F8 /* LaunchScreen.storyboard */; };
+		659D3AC8207BB053001EB2F8 /* Buddhist_ChordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659D3AC7207BB053001EB2F8 /* Buddhist_ChordsTests.swift */; };
+		659D3AD3207BB053001EB2F8 /* Buddhist_ChordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659D3AD2207BB053001EB2F8 /* Buddhist_ChordsUITests.swift */; };
+		65A5510C207BB2DD00F20DC8 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5510B207BB2DD00F20DC8 /* APIClient.swift */; };
+		65A5510E207BB38300F20DC8 /* RemoteListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5510D207BB38300F20DC8 /* RemoteListRepository.swift */; };
+		65A55110207BB39F00F20DC8 /* FavoritedListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5510F207BB39F00F20DC8 /* FavoritedListRepository.swift */; };
+		65A55112207BB3F100F20DC8 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A55111207BB3F100F20DC8 /* Song.swift */; };
+		65A55114207BB42800F20DC8 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A55113207BB42800F20DC8 /* Consts.swift */; };
+		B906CE83E4C34D11D0F3A9A3 /* Pods_Buddhist_Chords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BF17FE306ABEB8916D4324 /* Pods_Buddhist_Chords.framework */; };
+		C0B9B6DF4EA5797358278FA4 /* Pods_Buddhist_ChordsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1F26C729712317DC6C6496 /* Pods_Buddhist_ChordsUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		659D3AC4207BB053001EB2F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 659D3AA7207BB051001EB2F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 659D3AAE207BB051001EB2F8;
+			remoteInfo = "Buddhist Chords";
+		};
+		659D3ACF207BB053001EB2F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 659D3AA7207BB051001EB2F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 659D3AAE207BB051001EB2F8;
+			remoteInfo = "Buddhist Chords";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18B7B89F97AF5DF1CDA458A5 /* Pods-Buddhist ChordsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buddhist ChordsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Buddhist ChordsUITests/Pods-Buddhist ChordsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3B0DE4D5E190ECF51DB2EBE2 /* Pods-Buddhist ChordsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buddhist ChordsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Buddhist ChordsTests/Pods-Buddhist ChordsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		450902C7AD9CD4E69817CE8C /* Pods_Buddhist_ChordsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Buddhist_ChordsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		659D3AAF207BB051001EB2F8 /* Buddhist Chords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Buddhist Chords.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		659D3AB2207BB051001EB2F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		659D3AB4207BB051001EB2F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		659D3AB7207BB051001EB2F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		659D3AB9207BB052001EB2F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		659D3ABC207BB052001EB2F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		659D3ABE207BB052001EB2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		659D3AC3207BB053001EB2F8 /* Buddhist ChordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Buddhist ChordsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		659D3AC7207BB053001EB2F8 /* Buddhist_ChordsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buddhist_ChordsTests.swift; sourceTree = "<group>"; };
+		659D3AC9207BB053001EB2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		659D3ACE207BB053001EB2F8 /* Buddhist ChordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Buddhist ChordsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		659D3AD2207BB053001EB2F8 /* Buddhist_ChordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buddhist_ChordsUITests.swift; sourceTree = "<group>"; };
+		659D3AD4207BB053001EB2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65A5510B207BB2DD00F20DC8 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		65A5510D207BB38300F20DC8 /* RemoteListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteListRepository.swift; sourceTree = "<group>"; };
+		65A5510F207BB39F00F20DC8 /* FavoritedListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedListRepository.swift; sourceTree = "<group>"; };
+		65A55111207BB3F100F20DC8 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		65A55113207BB42800F20DC8 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		6D3EC3BCC4B7AE57A5398645 /* Pods-Buddhist Chords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buddhist Chords.release.xcconfig"; path = "Pods/Target Support Files/Pods-Buddhist Chords/Pods-Buddhist Chords.release.xcconfig"; sourceTree = "<group>"; };
+		A3BF17FE306ABEB8916D4324 /* Pods_Buddhist_Chords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Buddhist_Chords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B39746B72D6FB97012F9754F /* Pods-Buddhist Chords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buddhist Chords.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Buddhist Chords/Pods-Buddhist Chords.debug.xcconfig"; sourceTree = "<group>"; };
+		BC1F26C729712317DC6C6496 /* Pods_Buddhist_ChordsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Buddhist_ChordsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D863956532734076DCA4B1CC /* Pods-Buddhist ChordsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buddhist ChordsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Buddhist ChordsUITests/Pods-Buddhist ChordsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DFBFF889E575ADE057B38D67 /* Pods-Buddhist ChordsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buddhist ChordsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Buddhist ChordsTests/Pods-Buddhist ChordsTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		659D3AAC207BB051001EB2F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B906CE83E4C34D11D0F3A9A3 /* Pods_Buddhist_Chords.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		659D3AC0207BB053001EB2F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59CB22EFD3190E8B883FAA01 /* Pods_Buddhist_ChordsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		659D3ACB207BB053001EB2F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B9B6DF4EA5797358278FA4 /* Pods_Buddhist_ChordsUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C8B4E9F5BD41184F36CB3F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3BF17FE306ABEB8916D4324 /* Pods_Buddhist_Chords.framework */,
+				450902C7AD9CD4E69817CE8C /* Pods_Buddhist_ChordsTests.framework */,
+				BC1F26C729712317DC6C6496 /* Pods_Buddhist_ChordsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C2D58836AA8C7109E400F7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B39746B72D6FB97012F9754F /* Pods-Buddhist Chords.debug.xcconfig */,
+				6D3EC3BCC4B7AE57A5398645 /* Pods-Buddhist Chords.release.xcconfig */,
+				3B0DE4D5E190ECF51DB2EBE2 /* Pods-Buddhist ChordsTests.debug.xcconfig */,
+				DFBFF889E575ADE057B38D67 /* Pods-Buddhist ChordsTests.release.xcconfig */,
+				18B7B89F97AF5DF1CDA458A5 /* Pods-Buddhist ChordsUITests.debug.xcconfig */,
+				D863956532734076DCA4B1CC /* Pods-Buddhist ChordsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		659D3AA6207BB051001EB2F8 = {
+			isa = PBXGroup;
+			children = (
+				659D3AB1207BB051001EB2F8 /* Buddhist Chords */,
+				659D3AC6207BB053001EB2F8 /* Buddhist ChordsTests */,
+				659D3AD1207BB053001EB2F8 /* Buddhist ChordsUITests */,
+				659D3AB0207BB051001EB2F8 /* Products */,
+				4C2D58836AA8C7109E400F7A /* Pods */,
+				1C8B4E9F5BD41184F36CB3F2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		659D3AB0207BB051001EB2F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				659D3AAF207BB051001EB2F8 /* Buddhist Chords.app */,
+				659D3AC3207BB053001EB2F8 /* Buddhist ChordsTests.xctest */,
+				659D3ACE207BB053001EB2F8 /* Buddhist ChordsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		659D3AB1207BB051001EB2F8 /* Buddhist Chords */ = {
+			isa = PBXGroup;
+			children = (
+				659D3AB2207BB051001EB2F8 /* AppDelegate.swift */,
+				65A55113207BB42800F20DC8 /* Consts.swift */,
+				659D3AB4207BB051001EB2F8 /* ViewController.swift */,
+				65A55105207BB24900F20DC8 /* Models */,
+				65A55108207BB27F00F20DC8 /* Networking */,
+				659D3AB6207BB051001EB2F8 /* Main.storyboard */,
+				659D3AB9207BB052001EB2F8 /* Assets.xcassets */,
+				659D3ABB207BB052001EB2F8 /* LaunchScreen.storyboard */,
+				659D3ABE207BB052001EB2F8 /* Info.plist */,
+			);
+			path = "Buddhist Chords";
+			sourceTree = "<group>";
+		};
+		659D3AC6207BB053001EB2F8 /* Buddhist ChordsTests */ = {
+			isa = PBXGroup;
+			children = (
+				659D3AC7207BB053001EB2F8 /* Buddhist_ChordsTests.swift */,
+				659D3AC9207BB053001EB2F8 /* Info.plist */,
+			);
+			path = "Buddhist ChordsTests";
+			sourceTree = "<group>";
+		};
+		659D3AD1207BB053001EB2F8 /* Buddhist ChordsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				659D3AD2207BB053001EB2F8 /* Buddhist_ChordsUITests.swift */,
+				659D3AD4207BB053001EB2F8 /* Info.plist */,
+			);
+			path = "Buddhist ChordsUITests";
+			sourceTree = "<group>";
+		};
+		65A55105207BB24900F20DC8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				65A55106207BB25F00F20DC8 /* Repositories */,
+				65A55107207BB26B00F20DC8 /* Entities */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		65A55106207BB25F00F20DC8 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				65A5510D207BB38300F20DC8 /* RemoteListRepository.swift */,
+				65A5510F207BB39F00F20DC8 /* FavoritedListRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		65A55107207BB26B00F20DC8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				65A55111207BB3F100F20DC8 /* Song.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		65A55108207BB27F00F20DC8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				65A55109207BB28E00F20DC8 /* APIClient */,
+				65A5510A207BB2CF00F20DC8 /* APIs */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		65A55109207BB28E00F20DC8 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				65A5510B207BB2DD00F20DC8 /* APIClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		65A5510A207BB2CF00F20DC8 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		659D3AAE207BB051001EB2F8 /* Buddhist Chords */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 659D3AD7207BB053001EB2F8 /* Build configuration list for PBXNativeTarget "Buddhist Chords" */;
+			buildPhases = (
+				BC2F3C3DF4170DE4D8EEF9DC /* [CP] Check Pods Manifest.lock */,
+				659D3AAB207BB051001EB2F8 /* Sources */,
+				659D3AAC207BB051001EB2F8 /* Frameworks */,
+				659D3AAD207BB051001EB2F8 /* Resources */,
+				55F2952CF0C8DD78A37298FF /* [CP] Embed Pods Frameworks */,
+				568627335F9D5CE540FE4081 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Buddhist Chords";
+			productName = "Buddhist Chords";
+			productReference = 659D3AAF207BB051001EB2F8 /* Buddhist Chords.app */;
+			productType = "com.apple.product-type.application";
+		};
+		659D3AC2207BB053001EB2F8 /* Buddhist ChordsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 659D3ADA207BB053001EB2F8 /* Build configuration list for PBXNativeTarget "Buddhist ChordsTests" */;
+			buildPhases = (
+				BB5512185CA57C667BB49AAA /* [CP] Check Pods Manifest.lock */,
+				659D3ABF207BB053001EB2F8 /* Sources */,
+				659D3AC0207BB053001EB2F8 /* Frameworks */,
+				659D3AC1207BB053001EB2F8 /* Resources */,
+				1B46CE0C6E2AC1F9C7570BAC /* [CP] Embed Pods Frameworks */,
+				9F81CEBCAB63DA4F4DC96A74 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				659D3AC5207BB053001EB2F8 /* PBXTargetDependency */,
+			);
+			name = "Buddhist ChordsTests";
+			productName = "Buddhist ChordsTests";
+			productReference = 659D3AC3207BB053001EB2F8 /* Buddhist ChordsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		659D3ACD207BB053001EB2F8 /* Buddhist ChordsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 659D3ADD207BB053001EB2F8 /* Build configuration list for PBXNativeTarget "Buddhist ChordsUITests" */;
+			buildPhases = (
+				C0BE15F0D658D73F843073F7 /* [CP] Check Pods Manifest.lock */,
+				659D3ACA207BB053001EB2F8 /* Sources */,
+				659D3ACB207BB053001EB2F8 /* Frameworks */,
+				659D3ACC207BB053001EB2F8 /* Resources */,
+				AD6FC1DBE66236B365CF46DC /* [CP] Embed Pods Frameworks */,
+				C6AF8FFF50DF1896EADF4E60 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				659D3AD0207BB053001EB2F8 /* PBXTargetDependency */,
+			);
+			name = "Buddhist ChordsUITests";
+			productName = "Buddhist ChordsUITests";
+			productReference = 659D3ACE207BB053001EB2F8 /* Buddhist ChordsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		659D3AA7207BB051001EB2F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = iossimple;
+				TargetAttributes = {
+					659D3AAE207BB051001EB2F8 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					659D3AC2207BB053001EB2F8 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 659D3AAE207BB051001EB2F8;
+					};
+					659D3ACD207BB053001EB2F8 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 659D3AAE207BB051001EB2F8;
+					};
+				};
+			};
+			buildConfigurationList = 659D3AAA207BB051001EB2F8 /* Build configuration list for PBXProject "Buddhist Chords" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 659D3AA6207BB051001EB2F8;
+			productRefGroup = 659D3AB0207BB051001EB2F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				659D3AAE207BB051001EB2F8 /* Buddhist Chords */,
+				659D3AC2207BB053001EB2F8 /* Buddhist ChordsTests */,
+				659D3ACD207BB053001EB2F8 /* Buddhist ChordsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		659D3AAD207BB051001EB2F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				659D3ABD207BB052001EB2F8 /* LaunchScreen.storyboard in Resources */,
+				659D3ABA207BB052001EB2F8 /* Assets.xcassets in Resources */,
+				659D3AB8207BB051001EB2F8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		659D3AC1207BB053001EB2F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		659D3ACC207BB053001EB2F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B46CE0C6E2AC1F9C7570BAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Buddhist ChordsTests/Pods-Buddhist ChordsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55F2952CF0C8DD78A37298FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Buddhist Chords/Pods-Buddhist Chords-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Buddhist Chords/Pods-Buddhist Chords-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		568627335F9D5CE540FE4081 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Buddhist Chords/Pods-Buddhist Chords-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F81CEBCAB63DA4F4DC96A74 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Buddhist ChordsTests/Pods-Buddhist ChordsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD6FC1DBE66236B365CF46DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Buddhist ChordsUITests/Pods-Buddhist ChordsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB5512185CA57C667BB49AAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Buddhist ChordsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC2F3C3DF4170DE4D8EEF9DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Buddhist Chords-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0BE15F0D658D73F843073F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Buddhist ChordsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6AF8FFF50DF1896EADF4E60 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Buddhist ChordsUITests/Pods-Buddhist ChordsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		659D3AAB207BB051001EB2F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65A55112207BB3F100F20DC8 /* Song.swift in Sources */,
+				659D3AB5207BB051001EB2F8 /* ViewController.swift in Sources */,
+				65A5510E207BB38300F20DC8 /* RemoteListRepository.swift in Sources */,
+				65A55110207BB39F00F20DC8 /* FavoritedListRepository.swift in Sources */,
+				65A55114207BB42800F20DC8 /* Consts.swift in Sources */,
+				659D3AB3207BB051001EB2F8 /* AppDelegate.swift in Sources */,
+				65A5510C207BB2DD00F20DC8 /* APIClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		659D3ABF207BB053001EB2F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				659D3AC8207BB053001EB2F8 /* Buddhist_ChordsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		659D3ACA207BB053001EB2F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				659D3AD3207BB053001EB2F8 /* Buddhist_ChordsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		659D3AC5207BB053001EB2F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 659D3AAE207BB051001EB2F8 /* Buddhist Chords */;
+			targetProxy = 659D3AC4207BB053001EB2F8 /* PBXContainerItemProxy */;
+		};
+		659D3AD0207BB053001EB2F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 659D3AAE207BB051001EB2F8 /* Buddhist Chords */;
+			targetProxy = 659D3ACF207BB053001EB2F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		659D3AB6207BB051001EB2F8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				659D3AB7207BB051001EB2F8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		659D3ABB207BB052001EB2F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				659D3ABC207BB052001EB2F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		659D3AD5207BB053001EB2F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		659D3AD6207BB053001EB2F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		659D3AD8207BB053001EB2F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B39746B72D6FB97012F9754F /* Pods-Buddhist Chords.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D326JWPLAC;
+				INFOPLIST_FILE = "Buddhist Chords/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iossimple.Buddhist-Chords";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		659D3AD9207BB053001EB2F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D3EC3BCC4B7AE57A5398645 /* Pods-Buddhist Chords.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D326JWPLAC;
+				INFOPLIST_FILE = "Buddhist Chords/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iossimple.Buddhist-Chords";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		659D3ADB207BB053001EB2F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B0DE4D5E190ECF51DB2EBE2 /* Pods-Buddhist ChordsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D326JWPLAC;
+				INFOPLIST_FILE = "Buddhist ChordsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iossimple.Buddhist-ChordsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Buddhist Chords.app/Buddhist Chords";
+			};
+			name = Debug;
+		};
+		659D3ADC207BB053001EB2F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFBFF889E575ADE057B38D67 /* Pods-Buddhist ChordsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D326JWPLAC;
+				INFOPLIST_FILE = "Buddhist ChordsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iossimple.Buddhist-ChordsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Buddhist Chords.app/Buddhist Chords";
+			};
+			name = Release;
+		};
+		659D3ADE207BB053001EB2F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18B7B89F97AF5DF1CDA458A5 /* Pods-Buddhist ChordsUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D326JWPLAC;
+				INFOPLIST_FILE = "Buddhist ChordsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iossimple.Buddhist-ChordsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Buddhist Chords";
+			};
+			name = Debug;
+		};
+		659D3ADF207BB053001EB2F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D863956532734076DCA4B1CC /* Pods-Buddhist ChordsUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D326JWPLAC;
+				INFOPLIST_FILE = "Buddhist ChordsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iossimple.Buddhist-ChordsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Buddhist Chords";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		659D3AAA207BB051001EB2F8 /* Build configuration list for PBXProject "Buddhist Chords" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				659D3AD5207BB053001EB2F8 /* Debug */,
+				659D3AD6207BB053001EB2F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		659D3AD7207BB053001EB2F8 /* Build configuration list for PBXNativeTarget "Buddhist Chords" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				659D3AD8207BB053001EB2F8 /* Debug */,
+				659D3AD9207BB053001EB2F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		659D3ADA207BB053001EB2F8 /* Build configuration list for PBXNativeTarget "Buddhist ChordsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				659D3ADB207BB053001EB2F8 /* Debug */,
+				659D3ADC207BB053001EB2F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		659D3ADD207BB053001EB2F8 /* Build configuration list for PBXNativeTarget "Buddhist ChordsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				659D3ADE207BB053001EB2F8 /* Debug */,
+				659D3ADF207BB053001EB2F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 659D3AA7207BB051001EB2F8 /* Project object */;
+}

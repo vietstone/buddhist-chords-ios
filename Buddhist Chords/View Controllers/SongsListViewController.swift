@@ -52,6 +52,7 @@ class SongsListViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: "SongTableCell", bundle: nil), forCellReuseIdentifier: "SongTableCell")
+        tableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {

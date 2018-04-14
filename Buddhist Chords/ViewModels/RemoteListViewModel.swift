@@ -16,7 +16,11 @@ class RemoteListViewModel: SongsListViewModelProtocol {
         return remoteRepository.list
     }
     
-    var viewState: ViewState = .blank
+    var viewState: ViewState = .blank {
+        didSet {
+            dataUpdateClosure?(viewState)
+        }
+    }
     
     var dataUpdateClosure: ((ViewState) -> ())?
     

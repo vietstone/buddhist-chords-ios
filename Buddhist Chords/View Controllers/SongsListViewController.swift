@@ -28,12 +28,35 @@ class SongsListViewController: UITableViewController {
     convenience init(viewModel: SongsListViewModelProtocol) {
         self.init()
         self.viewModel = viewModel
+        self.viewModel.dataUpdateClosure = { [weak self] (viewState) in
+            DispatchQueue.main.async {
+                self?.handle(viewState: viewState)
+            }
+        }
+    }
+    
+    private func handle(viewState: ViewState) { // TODO: complement this function's logic
+        switch viewState {
+        case .blank:
+            break
+        case .loading:
+            break
+        case .data(_):
+            tableView.reloadData()
+        case .error(_):
+            break
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: "SongTableCell", bundle: nil), forCellReuseIdentifier: "SongTableCell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source

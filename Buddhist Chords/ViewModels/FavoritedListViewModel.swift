@@ -13,12 +13,21 @@ class FavoritedListViewModel: SongsListViewModelProtocol {
     
     var list: [Song] { return repository.list }
     
-    var viewState: ViewState = .blank
+    var viewState: ViewState = .blank {
+        didSet {
+            dataUpdateClosure?(viewState)
+        }
+    }
     
     var dataUpdateClosure: ((ViewState) -> ())?
     
     init(repository: FavoritedListRepositoryProtocol) {
         self.repository = repository
         self.viewState = .data(nil)
+        
+        self.repository.dataUpdateClosure = { [weak self] in
+            // don't want to update
+//            self?.viewState = .data(nil)
+        }
     }
 }

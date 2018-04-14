@@ -37,10 +37,19 @@ extension Song {
     }
     
     private func removeFromFavorite() {
-        guard let id = id else {
-            assert(false, "should not run here")
-            return
+        FavoritedListRepository.shared.removeSong(self)
+    }
+}
+
+extension Song {
+    var isValid: Bool { return id != nil }
+}
+
+extension Song: Equatable {
+    public static func == (lhs: Song, rhs: Song) -> Bool {
+        guard let lhsId = lhs.id, let rhsId = rhs.id else {
+            return false
         }
-        FavoritedListRepository.shared.removeSong(id)
+        return lhsId == rhsId
     }
 }

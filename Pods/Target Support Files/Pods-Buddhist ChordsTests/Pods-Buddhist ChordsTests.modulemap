@@ -1,0 +1,6 @@
+framework module Pods_Buddhist_ChordsTests {
+  umbrella header "Pods-Buddhist ChordsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

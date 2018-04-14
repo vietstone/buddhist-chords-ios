@@ -9,19 +9,36 @@
 import Foundation
 
 class RemoteListViewModel: SongsListViewModelProtocol {
-    private var _list: [Song]? = nil
+    private var remoteRepository = RemoteListRepository()
+    private var favoritedRepository = FavoritedListRepository.shared
     
     var list: [Song] {
-        if let _list = _list {
-            return _list
-        } else {
-            return []
-        }
+        return remoteRepository.list
     }
     
     var viewState: ViewState = .blank
     
     var dataUpdateClosure: ((ViewState) -> ())?
     
-    // TODO: connect with Repository
+    init() {
+        remoteRepository.requestStateUpdateClosure = { [weak self] rState in
+            self?.handle(requestState: rState)
+        }
+        remoteRepository.fetch()
+    }
+    
+    func handle(requestState: RequestState) {
+        switch requestState {
+        case .notStarted:
+            break
+        case .running:
+            viewState = .loading
+        case .cancelled:
+            break
+        case .error(let error):
+            viewState = .error(error)
+        case .successful(_):
+            viewState = .data(nil)
+        }
+    }
 }

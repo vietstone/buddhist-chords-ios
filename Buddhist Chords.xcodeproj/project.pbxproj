@@ -21,6 +21,10 @@
 		65A55112207BB3F100F20DC8 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A55111207BB3F100F20DC8 /* Song.swift */; };
 		65A55114207BB42800F20DC8 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A55113207BB42800F20DC8 /* Consts.swift */; };
 		65F588B42081F19200883B78 /* SongLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F588B32081F19200883B78 /* SongLanguage.swift */; };
+		65F588B62081F6CA00883B78 /* RemoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F588B52081F6CA00883B78 /* RemoteListViewModel.swift */; };
+		65F588B82081F6D800883B78 /* FavoritedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F588B72081F6D800883B78 /* FavoritedListViewModel.swift */; };
+		65F588BC2081F95C00883B78 /* ChordsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F588BB2081F95C00883B78 /* ChordsAPI.swift */; };
+		65F588BE2081F9DE00883B78 /* SongsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F588BD2081F9DE00883B78 /* SongsListViewController.swift */; };
 		B906CE83E4C34D11D0F3A9A3 /* Pods_Buddhist_Chords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BF17FE306ABEB8916D4324 /* Pods_Buddhist_Chords.framework */; };
 		C0B9B6DF4EA5797358278FA4 /* Pods_Buddhist_ChordsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1F26C729712317DC6C6496 /* Pods_Buddhist_ChordsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +69,10 @@
 		65A55111207BB3F100F20DC8 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		65A55113207BB42800F20DC8 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		65F588B32081F19200883B78 /* SongLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongLanguage.swift; sourceTree = "<group>"; };
+		65F588B52081F6CA00883B78 /* RemoteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteListViewModel.swift; sourceTree = "<group>"; };
+		65F588B72081F6D800883B78 /* FavoritedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedListViewModel.swift; sourceTree = "<group>"; };
+		65F588BB2081F95C00883B78 /* ChordsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsAPI.swift; sourceTree = "<group>"; };
+		65F588BD2081F9DE00883B78 /* SongsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsListViewController.swift; sourceTree = "<group>"; };
 		6D3EC3BCC4B7AE57A5398645 /* Pods-Buddhist Chords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buddhist Chords.release.xcconfig"; path = "Pods/Target Support Files/Pods-Buddhist Chords/Pods-Buddhist Chords.release.xcconfig"; sourceTree = "<group>"; };
 		A3BF17FE306ABEB8916D4324 /* Pods_Buddhist_Chords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Buddhist_Chords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39746B72D6FB97012F9754F /* Pods-Buddhist Chords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buddhist Chords.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Buddhist Chords/Pods-Buddhist Chords.debug.xcconfig"; sourceTree = "<group>"; };
@@ -205,25 +213,10 @@
 		65A55108207BB27F00F20DC8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				65A55109207BB28E00F20DC8 /* APIClient */,
-				65A5510A207BB2CF00F20DC8 /* APIs */,
+				65A5510B207BB2DD00F20DC8 /* APIClient.swift */,
+				65F588BB2081F95C00883B78 /* ChordsAPI.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		65A55109207BB28E00F20DC8 /* APIClient */ = {
-			isa = PBXGroup;
-			children = (
-				65A5510B207BB2DD00F20DC8 /* APIClient.swift */,
-			);
-			path = APIClient;
-			sourceTree = "<group>";
-		};
-		65A5510A207BB2CF00F20DC8 /* APIs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = APIs;
 			sourceTree = "<group>";
 		};
 		65F588B02081F00800883B78 /* Cache */ = {
@@ -236,6 +229,8 @@
 		65F588B12081F01800883B78 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				65F588B52081F6CA00883B78 /* RemoteListViewModel.swift */,
+				65F588B72081F6D800883B78 /* FavoritedListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -243,6 +238,7 @@
 		65F588B22081F02100883B78 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				65F588BD2081F9DE00883B78 /* SongsListViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -544,9 +540,13 @@
 				659D3AB5207BB051001EB2F8 /* ViewController.swift in Sources */,
 				65A5510E207BB38300F20DC8 /* RemoteListRepository.swift in Sources */,
 				65A55110207BB39F00F20DC8 /* FavoritedListRepository.swift in Sources */,
+				65F588B62081F6CA00883B78 /* RemoteListViewModel.swift in Sources */,
 				65A55114207BB42800F20DC8 /* Consts.swift in Sources */,
+				65F588B82081F6D800883B78 /* FavoritedListViewModel.swift in Sources */,
 				659D3AB3207BB051001EB2F8 /* AppDelegate.swift in Sources */,
 				65A5510C207BB2DD00F20DC8 /* APIClient.swift in Sources */,
+				65F588BE2081F9DE00883B78 /* SongsListViewController.swift in Sources */,
+				65F588BC2081F95C00883B78 /* ChordsAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

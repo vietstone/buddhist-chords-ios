@@ -8,6 +8,14 @@
 
 import Foundation
 
+protocol FavoritedListRepositoryProtocol {
+    var list: [Song] { get }
+    func addSong(_ song: Song)
+    func removeSong(_ songId: Int)
+    func addSongs(_ songs: [Song])
+    func removeSongs(_ songIds: [Int])
+}
+
 class FavoritedListRepository {
     
 }

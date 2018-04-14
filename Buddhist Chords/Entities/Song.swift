@@ -9,7 +9,8 @@
 import Foundation
 
 struct Song: Codable {
-    var title: String = ""
-    var language: SongLanguage = .vietnamese
-    var body = "<html></html>"
+    var id: Int?
+    var title: String?
+    var language: SongLanguage? = .vietnamese
+    var body: String? = "<html></html>"
 }

@@ -11,13 +11,14 @@
 		65307F1C20824AEC005983D3 /* SongTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65307F1B20824AEC005983D3 /* SongTableCell.swift */; };
 		65307F2020824B3A005983D3 /* SongTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65307F1F20824B3A005983D3 /* SongTableCell.xib */; };
 		659D3AB3207BB051001EB2F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659D3AB2207BB051001EB2F8 /* AppDelegate.swift */; };
-		659D3AB5207BB051001EB2F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659D3AB4207BB051001EB2F8 /* ViewController.swift */; };
 		659D3AB8207BB051001EB2F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659D3AB6207BB051001EB2F8 /* Main.storyboard */; };
 		659D3ABA207BB052001EB2F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659D3AB9207BB052001EB2F8 /* Assets.xcassets */; };
 		659D3ABD207BB052001EB2F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659D3ABB207BB052001EB2F8 /* LaunchScreen.storyboard */; };
 		659D3AC8207BB053001EB2F8 /* Buddhist_ChordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659D3AC7207BB053001EB2F8 /* Buddhist_ChordsTests.swift */; };
 		659D3AD3207BB053001EB2F8 /* Buddhist_ChordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659D3AD2207BB053001EB2F8 /* Buddhist_ChordsUITests.swift */; };
 		65A23F25208260C500B67A0A /* AppDelegate+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A23F24208260C500B67A0A /* AppDelegate+Setup.swift */; };
+		65A23F272082662600B67A0A /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A23F262082662600B67A0A /* SongViewController.swift */; };
+		65A23F2A208266D100B67A0A /* sample.html in Resources */ = {isa = PBXBuildFile; fileRef = 65A23F29208266D100B67A0A /* sample.html */; };
 		65A5510C207BB2DD00F20DC8 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5510B207BB2DD00F20DC8 /* APIClient.swift */; };
 		65A5510E207BB38300F20DC8 /* RemoteListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5510D207BB38300F20DC8 /* RemoteListRepository.swift */; };
 		65A55110207BB39F00F20DC8 /* FavoritedListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5510F207BB39F00F20DC8 /* FavoritedListRepository.swift */; };
@@ -57,7 +58,6 @@
 		65307F1F20824B3A005983D3 /* SongTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableCell.xib; sourceTree = "<group>"; };
 		659D3AAF207BB051001EB2F8 /* Buddhist Chords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Buddhist Chords.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		659D3AB2207BB051001EB2F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		659D3AB4207BB051001EB2F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		659D3AB7207BB051001EB2F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		659D3AB9207BB052001EB2F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		659D3ABC207BB052001EB2F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +69,8 @@
 		659D3AD2207BB053001EB2F8 /* Buddhist_ChordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buddhist_ChordsUITests.swift; sourceTree = "<group>"; };
 		659D3AD4207BB053001EB2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65A23F24208260C500B67A0A /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
+		65A23F262082662600B67A0A /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
+		65A23F29208266D100B67A0A /* sample.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = sample.html; sourceTree = "<group>"; };
 		65A5510B207BB2DD00F20DC8 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		65A5510D207BB38300F20DC8 /* RemoteListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteListRepository.swift; sourceTree = "<group>"; };
 		65A5510F207BB39F00F20DC8 /* FavoritedListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedListRepository.swift; sourceTree = "<group>"; };
@@ -183,7 +185,6 @@
 				659D3AB2207BB051001EB2F8 /* AppDelegate.swift */,
 				65A23F24208260C500B67A0A /* AppDelegate+Setup.swift */,
 				65A55113207BB42800F20DC8 /* Consts.swift */,
-				659D3AB4207BB051001EB2F8 /* ViewController.swift */,
 				65F588B22081F02100883B78 /* View Controllers */,
 				65307F1920824AAB005983D3 /* Views */,
 				65F588B12081F01800883B78 /* ViewModels */,
@@ -191,6 +192,7 @@
 				65A55107207BB26B00F20DC8 /* Entities */,
 				65A55108207BB27F00F20DC8 /* Networking */,
 				65F588B02081F00800883B78 /* Cache */,
+				65A23F28208266AC00B67A0A /* Resource */,
 				659D3AB6207BB051001EB2F8 /* Main.storyboard */,
 				659D3AB9207BB052001EB2F8 /* Assets.xcassets */,
 				659D3ABB207BB052001EB2F8 /* LaunchScreen.storyboard */,
@@ -215,6 +217,14 @@
 				659D3AD4207BB053001EB2F8 /* Info.plist */,
 			);
 			path = "Buddhist ChordsUITests";
+			sourceTree = "<group>";
+		};
+		65A23F28208266AC00B67A0A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				65A23F29208266D100B67A0A /* sample.html */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		65A55106207BB25F00F20DC8 /* Repositories */ = {
@@ -264,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				65F588BD2081F9DE00883B78 /* SongsListViewController.swift */,
+				65A23F262082662600B67A0A /* SongViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -384,6 +395,7 @@
 				659D3ABD207BB052001EB2F8 /* LaunchScreen.storyboard in Resources */,
 				65307F2020824B3A005983D3 /* SongTableCell.xib in Resources */,
 				659D3ABA207BB052001EB2F8 /* Assets.xcassets in Resources */,
+				65A23F2A208266D100B67A0A /* sample.html in Resources */,
 				659D3AB8207BB051001EB2F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,7 +575,6 @@
 			files = (
 				65F588B42081F19200883B78 /* SongLanguage.swift in Sources */,
 				65A55112207BB3F100F20DC8 /* Song.swift in Sources */,
-				659D3AB5207BB051001EB2F8 /* ViewController.swift in Sources */,
 				65A5510E207BB38300F20DC8 /* RemoteListRepository.swift in Sources */,
 				65A55110207BB39F00F20DC8 /* FavoritedListRepository.swift in Sources */,
 				65F588B62081F6CA00883B78 /* RemoteListViewModel.swift in Sources */,
@@ -573,6 +584,7 @@
 				65A5510C207BB2DD00F20DC8 /* APIClient.swift in Sources */,
 				65A23F25208260C500B67A0A /* AppDelegate+Setup.swift in Sources */,
 				65F588BE2081F9DE00883B78 /* SongsListViewController.swift in Sources */,
+				65A23F272082662600B67A0A /* SongViewController.swift in Sources */,
 				65F588BC2081F95C00883B78 /* ChordsAPI.swift in Sources */,
 				65307F1C20824AEC005983D3 /* SongTableCell.swift in Sources */,
 			);

@@ -20,7 +20,10 @@ extension AppDelegate {
         favoritedList.title = "Favorited List"
         
         let tabbarVC = UITabBarController()
-        tabbarVC.viewControllers = [remoteList, favoritedList]
+        tabbarVC.viewControllers = [
+            UINavigationController(rootViewController: remoteList),
+            UINavigationController(rootViewController: favoritedList)
+        ]
         
         return tabbarVC
     }

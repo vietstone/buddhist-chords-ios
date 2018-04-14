@@ -69,10 +69,17 @@ class SongsListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SongTableCell", for: indexPath)
 
         if let cell = cell as? SongTableCell {
-            cell.bind(viewModel.list[indexPath.row])
+            let data = viewModel.list[indexPath.row]
+            cell.bind(data)
         }
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // FIXME: correct
+        let songVC = SongViewController.createViewVC()
+        self.navigationController?.pushViewController(songVC, animated: true)
     }
 
 }

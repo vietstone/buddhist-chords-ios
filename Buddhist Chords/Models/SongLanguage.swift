@@ -8,13 +8,23 @@
 
 import Foundation
 
-enum SongLanguage: String, CustomStringConvertible {
-    case vietnamese = "vietnamese"
-    case english = "english"
-    case unknown = "####"
+enum SongLanguage: Int, CustomStringConvertible {
+    case vietnamese = 0
+    case english = 1
+    case thai = 2
+    case unknown = -100
     
     var description: String {
-        return self.rawValue
+        switch self {
+        case .vietnamese:
+            return "Tiếng Việt"
+        case .english:
+            return "English"
+        case .thai:
+            return "ภาษาไทย"
+        case .unknown:
+            return "####"
+        }
     }
 }
 
@@ -26,8 +36,8 @@ extension SongLanguage: Codable {
     
     public init(from decoder: Decoder) throws {
         var container = try decoder.unkeyedContainer()
-        if let rawString = try container.decodeIfPresent(String.self) {
-            self = SongLanguage(rawValue: rawString) ?? .unknown
+        if let rawInt = try container.decodeIfPresent(Int.self) {
+            self = SongLanguage(rawValue: rawInt) ?? .unknown
         } else {
             self = .unknown
         }

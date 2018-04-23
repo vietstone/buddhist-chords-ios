@@ -5,17 +5,25 @@ PODS:
     - Alamofire (~> 4.0)
     - PromiseKit/CorePromise
   - PromiseKit/CorePromise (6.2.3)
+  - Realm (3.4.0):
+    - Realm/Headers (= 3.4.0)
+  - Realm/Headers (3.4.0)
+  - RealmSwift (3.4.0):
+    - Realm (= 3.4.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - DeployGateSDK
   - PromiseKit/Alamofire (~> 6.0)
+  - RealmSwift (~> 3.4)
 
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
   DeployGateSDK: df3d5838db7e35c05a711c35a3bdeef3c2b016ba
   PromiseKit: 62f37bb4900a9b0b7550d017e41497171d93face
+  Realm: 9527c7baa2260f3a3aad6823d2d71cafff9b046b
+  RealmSwift: f40a747beaea1cadde7dcef41ee5a34b3001677b
 
-PODFILE CHECKSUM: 67565698c70bb453dbac0729d6790814a9032cf0
+PODFILE CHECKSUM: 15f6f29820d30bd920c5a4c222bd60c72c1daf01
 
 COCOAPODS: 1.4.0

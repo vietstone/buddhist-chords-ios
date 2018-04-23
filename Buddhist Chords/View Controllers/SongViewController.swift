@@ -11,7 +11,8 @@ import WebKit
 
 // TODO:
 class SongViewController: UIViewController {
-    @IBOutlet weak var webView: WKWebView!
+    private var webView: WKWebView!
+    @IBOutlet weak var webViewContainer: UIView!
     
     static func createViewVC() -> SongViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -24,7 +25,9 @@ class SongViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        initView()
+        
         if let filePath = Bundle.main.path(forResource: "sample", ofType: "html") {
 //            if (loadFile) {
                 // load file
@@ -41,6 +44,18 @@ class SongViewController: UIViewController {
                 }
 //            }
         }
+    }
+    
+    private func initView() {
+        webView = WKWebView()
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        self.webViewContainer.addSubview(webView)
+        NSLayoutConstraint.activate([
+            webView.topAnchor.constraint(equalTo: self.webViewContainer.topAnchor),
+            webView.leftAnchor.constraint(equalTo: self.webViewContainer.leftAnchor),
+            webView.bottomAnchor.constraint(equalTo: self.webViewContainer.bottomAnchor),
+            webView.rightAnchor.constraint(equalTo: self.webViewContainer.rightAnchor)
+            ])
     }
 
 }

@@ -1,6 +1,0 @@
-framework module Pods_Buddhist_Chords {
-  umbrella header "Pods-Buddhist Chords-umbrella.h"
-
-  export *
-  module * { export * }
-}

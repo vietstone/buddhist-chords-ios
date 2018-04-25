@@ -13,12 +13,14 @@ final class SelectLanguageBarItemBuilder {
     private static var dropDown = DropDown()
     
     static func getItem(with action: SelectLanguageProtocol) -> UIBarButtonItem {
+        // 3 things to care: action, title, setting
         let userSetting = UserDefaults.standard
         let languageSetting = userSetting.integer(forKey: AppConfig.languageUserDefaultsSettingKey) // default is 0, to Vietnamese
         let currentLanguage = SongLanguage(rawValue: languageSetting) ?? .unknown
         
         let barItem = UIBarButtonItem(title: currentLanguage.settingDescription,
                                       style: .plain, target: self, action: #selector(onTap))
+        action.select(language: currentLanguage)
         
         let appLanguages = AppConfig.appLanguages
         dropDown.dataSource = appLanguages.map { $0.settingDescription }
@@ -27,6 +29,7 @@ final class SelectLanguageBarItemBuilder {
             action.select(language: language)
             barItem.title = language.settingDescription
             userSetting.set(language.rawValue, forKey: AppConfig.languageUserDefaultsSettingKey)
+            userSetting.synchronize()
         }
         
         dropDown.anchorView = barItem

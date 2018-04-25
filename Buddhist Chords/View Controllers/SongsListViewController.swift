@@ -40,6 +40,8 @@ class SongsListViewController: UITableViewController {
         
         tableView.register(UINib(nibName: "SongTableCell", bundle: nil), forCellReuseIdentifier: "SongTableCell")
         tableView.tableFooterView = UIView()
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,16 +59,16 @@ class SongsListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SongTableCell", for: indexPath)
 
         if let cell = cell as? SongTableCell {
-            let data = viewModel.list[indexPath.row]
-            cell.bind(data)
+            let song = viewModel.list[indexPath.row]
+            cell.bind(song)
         }
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // FIXME: correct
-        let songVC = SongViewController.createViewVC()
+        let song = viewModel.list[indexPath.row]
+        let songVC = SongViewController.createViewVC(with: song)
         self.navigationController?.pushViewController(songVC, animated: true)
     }
 

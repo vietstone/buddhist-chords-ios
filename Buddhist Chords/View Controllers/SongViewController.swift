@@ -14,12 +14,15 @@ class SongViewController: UIViewController {
     private var webView: WKWebView!
     @IBOutlet weak var webViewContainer: UIView!
     
-    static func createViewVC() -> SongViewController {
+    private var song: Song?
+    
+    static func createViewVC(with song: Song) -> SongViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "SongViewController") as? SongViewController else {
             assert(false, "Wrong loading SongsListViewController from story board")
             return SongViewController()
         }
+        vc.song = song
         return vc
     }
     
@@ -27,23 +30,8 @@ class SongViewController: UIViewController {
         super.viewDidLoad()
         
         initView()
-        
-        if let filePath = Bundle.main.path(forResource: "sample", ofType: "html") {
-//            if (loadFile) {
-                // load file
-//                let filePathURL = URL.init(fileURLWithPath: filePath)
-//                let fileDirectoryURL = filePathURL.deletingLastPathComponent()
-//                webView.loadFileURL(filePathURL, allowingReadAccessTo: fileDirectoryURL)
-//            } else {
-                do {
-                    // load html string - baseURL needs to be set for local files to load correctly
-                    let html = try String(contentsOfFile: filePath, encoding: .utf8)
-                    webView.loadHTMLString(html, baseURL: Bundle.main.resourceURL)
-                } catch {
-                    print("Error loading html")
-                }
-//            }
-        }
+        title = song?.name
+        webView.loadHTMLString(song?.content ?? "", baseURL: nil)
     }
     
     private func initView() {

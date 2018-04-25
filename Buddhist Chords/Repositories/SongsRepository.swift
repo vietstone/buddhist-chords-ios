@@ -39,7 +39,15 @@ class SongsRepository: SongsRepositoryProtocol {
                 guard let realm = self?.getRealm else { return }
                 let me = User.defaultUser(in: realm)
                 try? realm.write {
-                    me.list.append(objectsIn: songResponses)
+                    for song in songResponses {
+                        let id = song.id
+                        if me.list.filter("id = %d", id).count == 0 {
+                            me.list.append(song)
+                        } else {
+                            let realmSong = realm.object(ofType: SongResponse.self, forPrimaryKey: id)
+                            realmSong?.updateContent(from: song)
+                        }
+                    }
                 }
                 requestStateObserver?(.successful(nil))
             }.catch { error in

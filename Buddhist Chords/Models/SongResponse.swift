@@ -85,8 +85,12 @@ extension SongResponse {
         return id != UnknownID
     }
     
-    var languageName: String {
-        return (SongLanguage(rawValue: ngonngu) ?? SongLanguage.unknown).description
+    func updateContent(from anotherSong: SongResponse) {
+        self.tieude = anotherSong.tieude
+        self.loibai = anotherSong.loibai
+        self.created_at = anotherSong.created_at
+        self.updated_at = anotherSong.updated_at
+        self.ngonngu = anotherSong.ngonngu
     }
 }
 
@@ -104,7 +108,7 @@ extension SongResponse: Song {
     }
     
     var contentPreview: String {
-        return "" // TODO
+        return "...." // FIXME:
     }
     
     var isFavorited: Bool {

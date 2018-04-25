@@ -25,10 +25,15 @@ class SongTableCell: UITableViewCell {
         bind(song)
     }
     
+    override func awakeFromNib() {
+        
+    }
+    
     private var song: Song?
     
     func bind(_ song: Song) {
         self.nameLabel.text = song.name
+        self.detailLabel.text = song.contentPreview
         let favoriteImage = song.isFavorited ? #imageLiteral(resourceName: "favorited_yes") : #imageLiteral(resourceName: "favorited_no")
         favoriteButton.setImage(favoriteImage, for: .normal)
         

@@ -49,9 +49,6 @@ class RemoteListViewModel: SongsListViewModelProtocol {
     
     init() {
         repository = SongsRepository()
-        repository.fetch { [weak self] (requestState) in
-            self?.handle(requestState: requestState)
-        }
     }
     
     private func handle(requestState: RequestState) {
@@ -66,6 +63,12 @@ class RemoteListViewModel: SongsListViewModelProtocol {
             viewState = .error(error)
         case .successful(_):
             viewState = .data(nil)
+        }
+    }
+    
+    func fetch() {
+        repository.fetch { [weak self] (requestState) in
+            self?.handle(requestState: requestState)
         }
     }
 }

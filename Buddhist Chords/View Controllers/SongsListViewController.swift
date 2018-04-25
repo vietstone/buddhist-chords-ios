@@ -27,26 +27,55 @@ class SongsListViewController: UITableViewController {
         case .blank:
             break
         case .loading:
-            break
+            if let refreshControl = self.refreshControl, !refreshControl.isRefreshing {
+                refreshControl.beginRefreshing()
+                let newContentOffset = tableView.contentOffset.y - refreshControl.frame.size.height
+                tableView.setContentOffset(CGPoint(x: 0, y: newContentOffset), animated: true)
+            }
         case .data(_):
+            refreshControl?.endRefreshing()
             tableView.reloadData()
-        case .error(_):
+        case .error(let error):
+            refreshControl?.endRefreshing()
+            alert(error: error)
             break
         }
+    }
+    
+    private func configureUI() {
+        tableView.register(UINib(nibName: "SongTableCell", bundle: nil), forCellReuseIdentifier: "SongTableCell")
+        tableView.tableFooterView = UIView()
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        self.refreshControl = refreshControl
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: "SongTableCell", bundle: nil), forCellReuseIdentifier: "SongTableCell")
-        tableView.tableFooterView = UIView()
+        configureUI()
         
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        refresh()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+    }
+    
+    // MARK: - Refreshing data
+    
+    @objc func refresh() {
+        viewModel.fetch()
+    }
+    
+    // MARK: - Alert
+    private func alert(error: Error) {
+        let alert = UIAlertController.errorAlert(title: NSLocalizedString("Error", comment: "Error Inform"), message: error.localizedDescription)
+        self.present(alert, animated: true, completion: nil)
     }
 
     // MARK: - Table view data source

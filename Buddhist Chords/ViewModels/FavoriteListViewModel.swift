@@ -20,4 +20,7 @@ class FavoriteListViewModel: SongsListViewModelProtocol {
     init() {
         repository = SongsRepository()
     }
+    
+    func fetch() { // No use, just here for protocol
+    }
 }

@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.1)
   - DeployGateSDK (1.0.7)
+  - DropDown (2.3.2)
   - PromiseKit/Alamofire (6.2.3):
     - Alamofire (~> 4.0)
     - PromiseKit/CorePromise
@@ -14,16 +15,18 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - DeployGateSDK
+  - DropDown (~> 2.0)
   - PromiseKit/Alamofire (~> 6.0)
   - RealmSwift (~> 3.4)
 
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
   DeployGateSDK: df3d5838db7e35c05a711c35a3bdeef3c2b016ba
+  DropDown: 7f87abecc28f9b4edad810fe1211c5c018c257e5
   PromiseKit: 62f37bb4900a9b0b7550d017e41497171d93face
   Realm: 9527c7baa2260f3a3aad6823d2d71cafff9b046b
   RealmSwift: f40a747beaea1cadde7dcef41ee5a34b3001677b
 
-PODFILE CHECKSUM: 15f6f29820d30bd920c5a4c222bd60c72c1daf01
+PODFILE CHECKSUM: c2b83ed2e5305ba6ecd9176366fa64dd064a3ab1
 
 COCOAPODS: 1.4.0

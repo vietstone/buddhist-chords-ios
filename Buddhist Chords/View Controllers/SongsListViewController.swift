@@ -45,12 +45,11 @@ class SongsListViewController: UITableViewController {
     private func configureUI() {
         tableView.register(UINib(nibName: "SongTableCell", bundle: nil), forCellReuseIdentifier: "SongTableCell")
         tableView.tableFooterView = UIView()
-        
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         self.refreshControl = refreshControl
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem.noTitleBackItem
     }
 
     override func viewDidLoad() {

@@ -26,6 +26,19 @@ enum SongLanguage: Int, CustomStringConvertible {
             return "####"
         }
     }
+    
+    var settingDescription: String {
+        switch self {
+        case .vietnamese:
+            return "🇻🇳 Tiếng Việt"
+        case .english:
+            return "🇺🇸 English"
+        case .thai:
+            return "🇹🇭 ภาษาไทย"
+        case .unknown:
+            return "####"
+        }
+    }
 }
 
 extension SongLanguage: Codable {

@@ -10,6 +10,7 @@ target 'Buddhist Chords' do
   pod 'PromiseKit/Alamofire', '~> 6.0'
   pod 'DeployGateSDK'
   pod 'RealmSwift', '~> 3.4'
+  pod 'DropDown', '~> 2.0'
 
   target 'Buddhist ChordsTests' do
     inherit! :search_paths

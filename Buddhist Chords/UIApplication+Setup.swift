@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import DropDown
 
 extension UIApplication {
     static func setupRootVC() -> UIViewController {
         let remoteVM = RemoteListViewModel()
         let remoteList = SongsListViewController(viewModel: remoteVM)
-        remoteList.title = "Remote List"
+        remoteList.title = NSLocalizedString("New List", comment: "New List Name")
+        remoteList.navigationItem.rightBarButtonItem = SelectLanguageBarItemBuilder.getItem(with: remoteVM)
         
         let favoriteVM = FavoriteListViewModel()
         let favoriteList = SongsListViewController(viewModel: favoriteVM)
-        favoriteList.title = "Favorited List"
+        favoriteList.title = NSLocalizedString("Favorited", comment: "Favorited List Name")
         
         let tabbarVC = UITabBarController()
         tabbarVC.viewControllers = [
@@ -25,5 +27,9 @@ extension UIApplication {
         ]
         
         return tabbarVC
+    }
+    
+    static func launchConfig() {
+        DropDown.startListeningToKeyboard()
     }
 }

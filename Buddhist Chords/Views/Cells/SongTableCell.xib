@@ -20,13 +20,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Euq-uT-CbR">
-                        <rect key="frame" x="16" y="11" width="285" height="21"/>
+                        <rect key="frame" x="16" y="11" width="301" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wkx-n5-G9j">
-                        <rect key="frame" x="309" y="12.5" width="50" height="50"/>
+                        <rect key="frame" x="325" y="12.5" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="kSC-EG-d1x"/>
                             <constraint firstAttribute="height" constant="50" id="vbv-g5-KRj"/>
@@ -37,7 +37,7 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some content ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVz-AX-QBQ">
-                        <rect key="frame" x="16" y="40" width="285" height="18"/>
+                        <rect key="frame" x="16" y="40" width="301" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
                     <constraint firstItem="uVz-AX-QBQ" firstAttribute="leading" secondItem="fY0-bk-9UJ" secondAttribute="leadingMargin" id="R3D-iU-lsq"/>
                     <constraint firstItem="Wkx-n5-G9j" firstAttribute="centerY" secondItem="fY0-bk-9UJ" secondAttribute="centerY" id="TJU-wx-rbH"/>
                     <constraint firstItem="Euq-uT-CbR" firstAttribute="top" secondItem="fY0-bk-9UJ" secondAttribute="topMargin" id="fhI-Cf-TVS"/>
-                    <constraint firstItem="Wkx-n5-G9j" firstAttribute="trailing" secondItem="fY0-bk-9UJ" secondAttribute="trailingMargin" id="g0M-Ic-bsH"/>
+                    <constraint firstItem="Wkx-n5-G9j" firstAttribute="trailing" secondItem="fY0-bk-9UJ" secondAttribute="trailing" id="g0M-Ic-bsH"/>
                     <constraint firstItem="uVz-AX-QBQ" firstAttribute="top" secondItem="Euq-uT-CbR" secondAttribute="bottom" constant="8" id="u6o-12-SE4"/>
                 </constraints>
             </tableViewCellContentView>

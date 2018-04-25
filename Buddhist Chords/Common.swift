@@ -27,7 +27,13 @@ enum ViewState {
 protocol SongsListViewModelProtocol {
     var list: [Song] { get }
     var dataUpdateClosure: ((ViewState)->())? { get set }
+    
+    var canFetch: Bool { get }
     func fetch()
+}
+
+extension SongsListViewModelProtocol {
+    var canFetch: Bool { return true }
 }
 
 protocol SelectLanguageProtocol {

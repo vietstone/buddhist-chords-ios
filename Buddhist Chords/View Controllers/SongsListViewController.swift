@@ -68,7 +68,11 @@ class SongsListViewController: UITableViewController {
     // MARK: - Refreshing data
     
     @objc func refresh() {
-        viewModel.fetch()
+        if viewModel.canFetch {
+            viewModel.fetch()
+        } else {
+            refreshControl?.endRefreshing()
+        }
     }
     
     // MARK: - Alert

@@ -21,6 +21,8 @@ class FavoriteListViewModel: SongsListViewModelProtocol {
         repository = SongsRepository()
     }
     
+    var canFetch: Bool { return false }
+    
     func fetch() { // No use, just here for protocol
     }
 }

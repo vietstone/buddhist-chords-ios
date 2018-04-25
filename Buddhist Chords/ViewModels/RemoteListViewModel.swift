@@ -9,29 +9,52 @@
 import Foundation
 
 class RemoteListViewModel: SongsListViewModelProtocol {
-    private var remoteRepository = RemoteListRepository()
-    private var favoritedRepository = FavoritedListRepository.shared
     
     var list: [Song] {
-        return remoteRepository.list
+        switch language {
+        case .vietnamese: return vietnameseList
+        case .english: return englishList
+        case .thai: return thaiList
+        default: return vietnameseList // error, then return default to vietnameseList
+        }
     }
     
-    var viewState: ViewState = .blank {
+    var vietnameseList: [Song] {
+        return repository.list.filter("ngonngu = %d", SongLanguage.vietnamese.rawValue).compactMap { $0 }
+    }
+    
+    var englishList: [Song] {
+        return repository.list.filter("ngonngu = %d", SongLanguage.english.rawValue).compactMap { $0 }
+    }
+    
+    var thaiList: [Song] {
+        return repository.list.filter("ngonngu = %d", SongLanguage.thai.rawValue).compactMap { $0 }
+    }
+    
+    var dataUpdateClosure: ((ViewState) -> ())?
+    
+    private var viewState: ViewState = .blank {
         didSet {
             dataUpdateClosure?(viewState)
         }
     }
     
-    var dataUpdateClosure: ((ViewState) -> ())?
-    
-    init() {
-        remoteRepository.requestStateUpdateClosure = { [weak self] rState in
-            self?.handle(requestState: rState)
+    private var language: SongLanguage = .unknown {
+        didSet {
+            dataUpdateClosure?(viewState) // re-inform the view to update data
         }
-        remoteRepository.fetch()
     }
     
-    func handle(requestState: RequestState) {
+    private var repository: SongsRepositoryProtocol
+    
+    init() {
+        repository = SongsRepository()
+        repository.fetch { [weak self] (requestState) in
+            self?.handle(requestState: requestState)
+        }
+    }
+    
+    private func handle(requestState: RequestState) {
         switch requestState {
         case .notStarted:
             break
@@ -44,5 +67,11 @@ class RemoteListViewModel: SongsListViewModelProtocol {
         case .successful(_):
             viewState = .data(nil)
         }
+    }
+}
+
+extension RemoteListViewModel: SelectLanguageProtocol {
+    func select(language: SongLanguage) {
+        self.language = language
     }
 }

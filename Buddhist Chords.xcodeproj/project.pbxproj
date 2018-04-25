@@ -13,23 +13,23 @@
 		6509C033208E49CC00AD77EF /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6509C032208E49CC00AD77EF /* URL+.swift */; };
 		65307F1C20824AEC005983D3 /* SongTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65307F1B20824AEC005983D3 /* SongTableCell.swift */; };
 		65307F2020824B3A005983D3 /* SongTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65307F1F20824B3A005983D3 /* SongTableCell.xib */; };
+		65638A0A2090385400BE04D1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65638A092090385400BE04D1 /* Common.swift */; };
+		65638A0C209060A500BE04D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65638A0B209060A500BE04D1 /* User.swift */; };
 		659D3AB3207BB051001EB2F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659D3AB2207BB051001EB2F8 /* AppDelegate.swift */; };
 		659D3AB8207BB051001EB2F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659D3AB6207BB051001EB2F8 /* Main.storyboard */; };
 		659D3ABA207BB052001EB2F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659D3AB9207BB052001EB2F8 /* Assets.xcassets */; };
 		659D3ABD207BB052001EB2F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659D3ABB207BB052001EB2F8 /* LaunchScreen.storyboard */; };
 		659D3AC8207BB053001EB2F8 /* Buddhist_ChordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659D3AC7207BB053001EB2F8 /* Buddhist_ChordsTests.swift */; };
 		659D3AD3207BB053001EB2F8 /* Buddhist_ChordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659D3AD2207BB053001EB2F8 /* Buddhist_ChordsUITests.swift */; };
-		65A23F25208260C500B67A0A /* AppDelegate+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A23F24208260C500B67A0A /* AppDelegate+Setup.swift */; };
+		65A23F25208260C500B67A0A /* UIApplication+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A23F24208260C500B67A0A /* UIApplication+Setup.swift */; };
 		65A23F272082662600B67A0A /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A23F262082662600B67A0A /* SongViewController.swift */; };
 		65A23F2A208266D100B67A0A /* sample.html in Resources */ = {isa = PBXBuildFile; fileRef = 65A23F29208266D100B67A0A /* sample.html */; };
 		65A5510C207BB2DD00F20DC8 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5510B207BB2DD00F20DC8 /* APIClient.swift */; };
-		65A5510E207BB38300F20DC8 /* RemoteListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5510D207BB38300F20DC8 /* RemoteListRepository.swift */; };
-		65A55110207BB39F00F20DC8 /* FavoritedListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5510F207BB39F00F20DC8 /* FavoritedListRepository.swift */; };
-		65A55112207BB3F100F20DC8 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A55111207BB3F100F20DC8 /* Song.swift */; };
+		65A5510E207BB38300F20DC8 /* SongsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5510D207BB38300F20DC8 /* SongsRepository.swift */; };
 		65A55114207BB42800F20DC8 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A55113207BB42800F20DC8 /* Consts.swift */; };
 		65F588B42081F19200883B78 /* SongLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F588B32081F19200883B78 /* SongLanguage.swift */; };
 		65F588B62081F6CA00883B78 /* RemoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F588B52081F6CA00883B78 /* RemoteListViewModel.swift */; };
-		65F588B82081F6D800883B78 /* FavoritedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F588B72081F6D800883B78 /* FavoritedListViewModel.swift */; };
+		65F588B82081F6D800883B78 /* FavoriteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F588B72081F6D800883B78 /* FavoriteListViewModel.swift */; };
 		65F588BC2081F95C00883B78 /* ChordsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F588BB2081F95C00883B78 /* ChordsAPI.swift */; };
 		65F588BE2081F9DE00883B78 /* SongsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F588BD2081F9DE00883B78 /* SongsListViewController.swift */; };
 		B906CE83E4C34D11D0F3A9A3 /* Pods_Buddhist_Chords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BF17FE306ABEB8916D4324 /* Pods_Buddhist_Chords.framework */; };
@@ -62,6 +62,8 @@
 		6509C032208E49CC00AD77EF /* URL+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
 		65307F1B20824AEC005983D3 /* SongTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableCell.swift; sourceTree = "<group>"; };
 		65307F1F20824B3A005983D3 /* SongTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableCell.xib; sourceTree = "<group>"; };
+		65638A092090385400BE04D1 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		65638A0B209060A500BE04D1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		659D3AAF207BB051001EB2F8 /* Buddhist Chords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Buddhist Chords.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		659D3AB2207BB051001EB2F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		659D3AB7207BB051001EB2F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,17 +76,15 @@
 		659D3ACE207BB053001EB2F8 /* Buddhist ChordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Buddhist ChordsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		659D3AD2207BB053001EB2F8 /* Buddhist_ChordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buddhist_ChordsUITests.swift; sourceTree = "<group>"; };
 		659D3AD4207BB053001EB2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65A23F24208260C500B67A0A /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
+		65A23F24208260C500B67A0A /* UIApplication+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Setup.swift"; sourceTree = "<group>"; };
 		65A23F262082662600B67A0A /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
 		65A23F29208266D100B67A0A /* sample.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = sample.html; sourceTree = "<group>"; };
 		65A5510B207BB2DD00F20DC8 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		65A5510D207BB38300F20DC8 /* RemoteListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteListRepository.swift; sourceTree = "<group>"; };
-		65A5510F207BB39F00F20DC8 /* FavoritedListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedListRepository.swift; sourceTree = "<group>"; };
-		65A55111207BB3F100F20DC8 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		65A5510D207BB38300F20DC8 /* SongsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsRepository.swift; sourceTree = "<group>"; };
 		65A55113207BB42800F20DC8 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		65F588B32081F19200883B78 /* SongLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongLanguage.swift; sourceTree = "<group>"; };
 		65F588B52081F6CA00883B78 /* RemoteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteListViewModel.swift; sourceTree = "<group>"; };
-		65F588B72081F6D800883B78 /* FavoritedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedListViewModel.swift; sourceTree = "<group>"; };
+		65F588B72081F6D800883B78 /* FavoriteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewModel.swift; sourceTree = "<group>"; };
 		65F588BB2081F95C00883B78 /* ChordsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsAPI.swift; sourceTree = "<group>"; };
 		65F588BD2081F9DE00883B78 /* SongsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsListViewController.swift; sourceTree = "<group>"; };
 		6D3EC3BCC4B7AE57A5398645 /* Pods-Buddhist Chords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buddhist Chords.release.xcconfig"; path = "Pods/Target Support Files/Pods-Buddhist Chords/Pods-Buddhist Chords.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,8 +197,9 @@
 			isa = PBXGroup;
 			children = (
 				659D3AB2207BB051001EB2F8 /* AppDelegate.swift */,
-				65A23F24208260C500B67A0A /* AppDelegate+Setup.swift */,
+				65A23F24208260C500B67A0A /* UIApplication+Setup.swift */,
 				65A55113207BB42800F20DC8 /* Consts.swift */,
+				65638A092090385400BE04D1 /* Common.swift */,
 				65F588B22081F02100883B78 /* View Controllers */,
 				65307F1920824AAB005983D3 /* Views */,
 				65F588B12081F01800883B78 /* ViewModels */,
@@ -244,8 +245,7 @@
 		65A55106207BB25F00F20DC8 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				65A5510D207BB38300F20DC8 /* RemoteListRepository.swift */,
-				65A5510F207BB39F00F20DC8 /* FavoritedListRepository.swift */,
+				65A5510D207BB38300F20DC8 /* SongsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -255,8 +255,8 @@
 			children = (
 				6509C02C208E483B00AD77EF /* RealmConfig.swift */,
 				6509C02D208E483B00AD77EF /* SongResponse.swift */,
-				65A55111207BB3F100F20DC8 /* Song.swift */,
 				65F588B32081F19200883B78 /* SongLanguage.swift */,
+				65638A0B209060A500BE04D1 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -274,7 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				65F588B52081F6CA00883B78 /* RemoteListViewModel.swift */,
-				65F588B72081F6D800883B78 /* FavoritedListViewModel.swift */,
+				65F588B72081F6D800883B78 /* FavoriteListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -592,18 +592,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				65F588B42081F19200883B78 /* SongLanguage.swift in Sources */,
-				65A55112207BB3F100F20DC8 /* Song.swift in Sources */,
 				6509C02E208E483B00AD77EF /* RealmConfig.swift in Sources */,
+				65638A0A2090385400BE04D1 /* Common.swift in Sources */,
 				6509C02F208E483B00AD77EF /* SongResponse.swift in Sources */,
-				65A5510E207BB38300F20DC8 /* RemoteListRepository.swift in Sources */,
-				65A55110207BB39F00F20DC8 /* FavoritedListRepository.swift in Sources */,
+				65A5510E207BB38300F20DC8 /* SongsRepository.swift in Sources */,
 				65F588B62081F6CA00883B78 /* RemoteListViewModel.swift in Sources */,
 				65A55114207BB42800F20DC8 /* Consts.swift in Sources */,
-				65F588B82081F6D800883B78 /* FavoritedListViewModel.swift in Sources */,
+				65F588B82081F6D800883B78 /* FavoriteListViewModel.swift in Sources */,
 				659D3AB3207BB051001EB2F8 /* AppDelegate.swift in Sources */,
 				6509C033208E49CC00AD77EF /* URL+.swift in Sources */,
+				65638A0C209060A500BE04D1 /* User.swift in Sources */,
 				65A5510C207BB2DD00F20DC8 /* APIClient.swift in Sources */,
-				65A23F25208260C500B67A0A /* AppDelegate+Setup.swift in Sources */,
+				65A23F25208260C500B67A0A /* UIApplication+Setup.swift in Sources */,
 				65F588BE2081F9DE00883B78 /* SongsListViewController.swift in Sources */,
 				65A23F272082662600B67A0A /* SongViewController.swift in Sources */,
 				65F588BC2081F95C00883B78 /* ChordsAPI.swift in Sources */,

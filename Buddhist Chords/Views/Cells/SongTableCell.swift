@@ -19,7 +19,7 @@ class SongTableCell: UITableViewCell {
         }
         
         // logic for data
-        song.toggleFavoritedState()
+        song.toggleFavorite()
         
         // re-display UI
         bind(song)
@@ -28,7 +28,7 @@ class SongTableCell: UITableViewCell {
     private var song: Song?
     
     func bind(_ song: Song) {
-        self.nameLabel.text = song.title
+        self.nameLabel.text = song.name
         let favoriteImage = song.isFavorited ? #imageLiteral(resourceName: "favorited_yes") : #imageLiteral(resourceName: "favorited_no")
         favoriteButton.setImage(favoriteImage, for: .normal)
         

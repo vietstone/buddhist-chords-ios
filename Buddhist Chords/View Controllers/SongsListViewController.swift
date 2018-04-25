@@ -8,19 +8,6 @@
 
 import UIKit
 
-enum ViewState {
-    case blank
-    case loading
-    case data(Any?)
-    case error(Error)
-}
-
-protocol SongsListViewModelProtocol {
-    var list: [Song] { get }
-    var viewState: ViewState { get }
-    var dataUpdateClosure: ((ViewState)->())? { get set }
-}
-
 class SongsListViewController: UITableViewController {
     
     private var viewModel: SongsListViewModelProtocol!

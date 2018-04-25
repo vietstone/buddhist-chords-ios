@@ -1,5 +1,5 @@
 //
-//  AppDelegate+Setup.swift
+//  UIApplication+Setup.swift
 //  Buddhist Chords
 //
 //  Created by Viet Nguyen Tran on 4/14/18.
@@ -8,21 +8,20 @@
 
 import UIKit
 
-extension AppDelegate {
+extension UIApplication {
     static func setupRootVC() -> UIViewController {
         let remoteVM = RemoteListViewModel()
         let remoteList = SongsListViewController(viewModel: remoteVM)
         remoteList.title = "Remote List"
         
-        let favoritedRepo = FavoritedListRepository.shared
-        let favoritedVM = FavoritedListViewModel(repository: favoritedRepo)
-        let favoritedList = SongsListViewController(viewModel: favoritedVM)
-        favoritedList.title = "Favorited List"
+        let favoriteVM = FavoriteListViewModel()
+        let favoriteList = SongsListViewController(viewModel: favoriteVM)
+        favoriteList.title = "Favorited List"
         
         let tabbarVC = UITabBarController()
         tabbarVC.viewControllers = [
             UINavigationController(rootViewController: remoteList),
-            UINavigationController(rootViewController: favoritedList)
+            UINavigationController(rootViewController: favoriteList)
         ]
         
         return tabbarVC

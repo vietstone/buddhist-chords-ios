@@ -89,3 +89,31 @@ extension SongResponse {
         return (SongLanguage(rawValue: ngonngu) ?? SongLanguage.unknown).description
     }
 }
+
+extension SongResponse: Song {
+    var name: String {
+        return tieude ?? ""
+    }
+    
+    var language: SongLanguage {
+        return SongLanguage(rawValue: ngonngu) ?? .unknown
+    }
+    
+    var content: String {
+        return loibai ?? ""
+    }
+    
+    var contentPreview: String {
+        return "" // TODO
+    }
+    
+    var isFavorited: Bool {
+        return isFavorite
+    }
+    
+    func toggleFavorite() {
+        try? realm?.write {
+            isFavorite = !isFavorite
+        }
+    }
+}

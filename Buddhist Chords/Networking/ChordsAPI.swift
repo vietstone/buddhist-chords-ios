@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import PromiseKit
+
+class ChordsAPI: APIClient {
+    static func fetchSongs() -> Promise<[SongResponse]> {
+        return self.dataRequest(path: "/thienca")
+    }
+}

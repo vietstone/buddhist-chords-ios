@@ -16,7 +16,7 @@ protocol APIClient {
 
 extension APIClient {
     static var rootURL: String {
-        return "http://localhost:3000"
+        return "https://pvsongs.com/api"
     }
     
     static func dataRequest<T: Decodable>(path: String,

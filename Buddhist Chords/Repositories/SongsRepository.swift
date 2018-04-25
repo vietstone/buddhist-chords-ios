@@ -23,13 +23,28 @@ protocol SongsRepositoryProtocol {
 }
 
 class SongsRepository: SongsRepositoryProtocol {
+    private var getRealm: Realm {
+        return try! Realm(configuration: RealmConfig.main.configuration)
+    }
+    
     var list: List<SongResponse> {
-        let realm = try! Realm(configuration: RealmConfig.main.configuration)
+        let realm = self.getRealm
         return User.defaultUser(in: realm).list
     }
     
     func fetch(requestStateObserver: ((RequestState) -> Void)?) {
-        // TODO:
+        requestStateObserver?(.running)
+        ChordsAPI.fetchSongs()
+            .done { [weak self] songResponses in
+                guard let realm = self?.getRealm else { return }
+                let me = User.defaultUser(in: realm)
+                try? realm.write {
+                    me.list.append(objectsIn: songResponses)
+                }
+                requestStateObserver?(.successful(nil))
+            }.catch { error in
+                requestStateObserver?(.error(error))
+        }
     }
     
     

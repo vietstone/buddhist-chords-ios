@@ -6,27 +6,27 @@ PODS:
     - Alamofire (~> 4.0)
     - PromiseKit/CorePromise
   - PromiseKit/CorePromise (6.2.3)
-  - Realm (3.4.0):
-    - Realm/Headers (= 3.4.0)
-  - Realm/Headers (3.4.0)
-  - RealmSwift (3.4.0):
-    - Realm (= 3.4.0)
+  - Realm (3.5.0):
+    - Realm/Headers (= 3.5.0)
+  - Realm/Headers (3.5.0)
+  - RealmSwift (3.5.0):
+    - Realm (= 3.5.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - DeployGateSDK
   - DropDown (~> 2.0)
   - PromiseKit/Alamofire (~> 6.0)
-  - RealmSwift (~> 3.4)
+  - RealmSwift (~> 3.5)
 
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
   DeployGateSDK: df3d5838db7e35c05a711c35a3bdeef3c2b016ba
   DropDown: 7f87abecc28f9b4edad810fe1211c5c018c257e5
   PromiseKit: 62f37bb4900a9b0b7550d017e41497171d93face
-  Realm: 9527c7baa2260f3a3aad6823d2d71cafff9b046b
-  RealmSwift: f40a747beaea1cadde7dcef41ee5a34b3001677b
+  Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
+  RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
 
-PODFILE CHECKSUM: c2b83ed2e5305ba6ecd9176366fa64dd064a3ab1
+PODFILE CHECKSUM: 6f8810e700941296b8663523cee47599e3a5adfe
 
 COCOAPODS: 1.4.0

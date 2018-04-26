@@ -9,7 +9,7 @@ target 'Buddhist Chords' do
   pod 'Alamofire', '~> 4.7'
   pod 'PromiseKit/Alamofire', '~> 6.0'
   pod 'DeployGateSDK'
-  pod 'RealmSwift', '~> 3.4'
+  pod 'RealmSwift', '~> 3.5'
   pod 'DropDown', '~> 2.0'
 
   target 'Buddhist ChordsTests' do

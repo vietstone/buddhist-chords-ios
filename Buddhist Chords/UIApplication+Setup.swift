@@ -11,7 +11,7 @@ import DropDown
 
 extension UIApplication {
     static func setupRootVC() -> UIViewController {
-        let remoteTitle = NSLocalizedString("New List", comment: "New List Name")
+        let remoteTitle = NSLocalizedString("All", comment: "All Name")
         let remoteVM = RemoteListViewModel()
         let remoteList = SongsListViewController(viewModel: remoteVM)
         remoteList.title = remoteTitle
@@ -40,6 +40,7 @@ extension UIApplication {
         
         UITabBar.appearance().barTintColor = UIColor(r: 76, g: 134, b: 191)
         UITabBar.appearance().tintColor = .white
+        UITabBar.appearance().unselectedItemTintColor = .lightGray
     }
     
     static func launchConfig() {

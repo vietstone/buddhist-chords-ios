@@ -41,7 +41,9 @@ class RemoteListViewModel: SongsListViewModelProtocol {
     
     private var language: SongLanguage = .unknown {
         didSet {
-            dataUpdateClosure?(viewState) // re-inform the view to update data
+            // re-inform the view to update data
+            let state = ViewState.data(nil)
+            dataUpdateClosure?(state)
         }
     }
     

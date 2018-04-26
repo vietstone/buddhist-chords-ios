@@ -16,9 +16,6 @@
 		65307F2020824B3A005983D3 /* SongTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65307F1F20824B3A005983D3 /* SongTableCell.xib */; };
 		65638A0A2090385400BE04D1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65638A092090385400BE04D1 /* Common.swift */; };
 		65638A0C209060A500BE04D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65638A0B209060A500BE04D1 /* User.swift */; };
-		6573AD982091763C004171EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6573AD962091763C004171EC /* InfoPlist.strings */; };
-		6573AD9B2091763C004171EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6573AD992091763C004171EC /* InfoPlist.strings */; };
-		6573AD9E2091763C004171EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6573AD9C2091763C004171EC /* InfoPlist.strings */; };
 		659D3AB3207BB051001EB2F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659D3AB2207BB051001EB2F8 /* AppDelegate.swift */; };
 		659D3AB8207BB051001EB2F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659D3AB6207BB051001EB2F8 /* Main.storyboard */; };
 		659D3ABA207BB052001EB2F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659D3AB9207BB052001EB2F8 /* Assets.xcassets */; };
@@ -74,9 +71,6 @@
 		65638A092090385400BE04D1 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		65638A0B209060A500BE04D1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6573AD952091729E004171EC /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6573AD9F2091771F004171EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6573ADA02091774B004171EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6573ADA12091775C004171EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		659D3AAF207BB051001EB2F8 /* Buddhist Chords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Buddhist Chords.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		659D3AB2207BB051001EB2F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		659D3AB7207BB051001EB2F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -233,7 +227,6 @@
 				659D3AB9207BB052001EB2F8 /* Assets.xcassets */,
 				659D3ABB207BB052001EB2F8 /* LaunchScreen.storyboard */,
 				659D3ABE207BB052001EB2F8 /* Info.plist */,
-				6573AD962091763C004171EC /* InfoPlist.strings */,
 				65CF614E20917171003AD55A /* Localizable.strings */,
 			);
 			path = "Buddhist Chords";
@@ -244,7 +237,6 @@
 			children = (
 				659D3AC7207BB053001EB2F8 /* Buddhist_ChordsTests.swift */,
 				659D3AC9207BB053001EB2F8 /* Info.plist */,
-				6573AD9C2091763C004171EC /* InfoPlist.strings */,
 			);
 			path = "Buddhist ChordsTests";
 			sourceTree = "<group>";
@@ -254,7 +246,6 @@
 			children = (
 				659D3AD2207BB053001EB2F8 /* Buddhist_ChordsUITests.swift */,
 				659D3AD4207BB053001EB2F8 /* Info.plist */,
-				6573AD992091763C004171EC /* InfoPlist.strings */,
 			);
 			path = "Buddhist ChordsUITests";
 			sourceTree = "<group>";
@@ -436,7 +427,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				659D3ABD207BB052001EB2F8 /* LaunchScreen.storyboard in Resources */,
-				6573AD982091763C004171EC /* InfoPlist.strings in Resources */,
 				65307F2020824B3A005983D3 /* SongTableCell.xib in Resources */,
 				65CF615020917171003AD55A /* Localizable.strings in Resources */,
 				659D3ABA207BB052001EB2F8 /* Assets.xcassets in Resources */,
@@ -449,7 +439,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6573AD9E2091763C004171EC /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +446,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6573AD9B2091763C004171EC /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,30 +675,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6573AD962091763C004171EC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6573AD9F2091771F004171EC /* Base */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6573AD992091763C004171EC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6573ADA12091775C004171EC /* Base */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6573AD9C2091763C004171EC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6573ADA02091774B004171EC /* Base */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		659D3AB6207BB051001EB2F8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -861,7 +825,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = D326JWPLAC;
 				INFOPLIST_FILE = "Buddhist Chords/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -883,7 +847,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = D326JWPLAC;
 				INFOPLIST_FILE = "Buddhist Chords/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

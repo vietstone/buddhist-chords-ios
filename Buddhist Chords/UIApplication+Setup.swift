@@ -11,14 +11,18 @@ import DropDown
 
 extension UIApplication {
     static func setupRootVC() -> UIViewController {
+        let remoteTitle = NSLocalizedString("New List", comment: "New List Name")
         let remoteVM = RemoteListViewModel()
         let remoteList = SongsListViewController(viewModel: remoteVM)
-        remoteList.title = NSLocalizedString("New List", comment: "New List Name")
+        remoteList.title = remoteTitle
         remoteList.navigationItem.rightBarButtonItem = SelectLanguageBarItemBuilder.getItem(with: remoteVM)
+        remoteList.tabBarItem = UITabBarItem(title: remoteTitle, image: #imageLiteral(resourceName: "tabbar_new"), tag: 0)
         
+        let favoriteTitle = NSLocalizedString("Favorited", comment: "Favorited List Name")
         let favoriteVM = FavoriteListViewModel()
         let favoriteList = SongsListViewController(viewModel: favoriteVM)
-        favoriteList.title = NSLocalizedString("Favorited", comment: "Favorited List Name")
+        favoriteList.title = favoriteTitle
+        favoriteList.tabBarItem = UITabBarItem(title: favoriteTitle, image: #imageLiteral(resourceName: "tabbar_favorite"), tag: 1)
         
         let tabbarVC = UITabBarController()
         tabbarVC.viewControllers = [

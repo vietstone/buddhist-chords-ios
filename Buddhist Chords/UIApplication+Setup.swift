@@ -29,6 +29,15 @@ extension UIApplication {
         return tabbarVC
     }
     
+    static func appUIConfig() {
+        UINavigationBar.appearance().barTintColor = UIColor(r: 76, g: 134, b: 191)
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        
+        UITabBar.appearance().barTintColor = UIColor(r: 76, g: 134, b: 191)
+        UITabBar.appearance().tintColor = .white
+    }
+    
     static func launchConfig() {
         DropDown.startListeningToKeyboard()
     }

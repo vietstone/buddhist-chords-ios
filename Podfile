@@ -11,6 +11,8 @@ target 'Buddhist Chords' do
   pod 'DeployGateSDK'
   pod 'RealmSwift', '~> 3.5'
   pod 'DropDown', '~> 2.0'
+  pod 'Fabric'
+  pod 'Crashlytics', '~> 3.10'
 
   target 'Buddhist ChordsTests' do
     inherit! :search_paths

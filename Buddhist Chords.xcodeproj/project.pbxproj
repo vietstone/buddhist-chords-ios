@@ -328,6 +328,7 @@
 				659D3AAD207BB051001EB2F8 /* Resources */,
 				55F2952CF0C8DD78A37298FF /* [CP] Embed Pods Frameworks */,
 				568627335F9D5CE540FE4081 /* [CP] Copy Pods Resources */,
+				6531AB56209BF69F00359D39 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -516,6 +517,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Buddhist Chords/Pods-Buddhist Chords-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		6531AB56209BF69F00359D39 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 30ccd8f2f3029dd9361921fa7b461c3624c91ad2 0470bb14ef8c527346c3d8bb8cf72129aeaf25d3339cc579911049fb3ae1e0af";
 		};
 		9F81CEBCAB63DA4F4DC96A74 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -838,6 +852,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = D326JWPLAC;
 				INFOPLIST_FILE = "Buddhist Chords/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

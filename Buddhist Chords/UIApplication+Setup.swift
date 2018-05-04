@@ -8,6 +8,8 @@
 
 import UIKit
 import DropDown
+import Fabric
+import Crashlytics
 
 extension UIApplication {
     static func setupRootVC() -> UIViewController {
@@ -45,5 +47,6 @@ extension UIApplication {
     
     static func launchConfig() {
         DropDown.startListeningToKeyboard()
+        Fabric.with([Crashlytics.self])
     }
 }

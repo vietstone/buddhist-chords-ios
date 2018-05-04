@@ -1,7 +1,10 @@
 PODS:
   - Alamofire (4.7.1)
+  - Crashlytics (3.10.1):
+    - Fabric (~> 1.7.5)
   - DeployGateSDK (1.0.7)
   - DropDown (2.3.2)
+  - Fabric (1.7.6)
   - PromiseKit/Alamofire (6.2.3):
     - Alamofire (~> 4.0)
     - PromiseKit/CorePromise
@@ -14,19 +17,23 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - Crashlytics (~> 3.10)
   - DeployGateSDK
   - DropDown (~> 2.0)
+  - Fabric
   - PromiseKit/Alamofire (~> 6.0)
   - RealmSwift (~> 3.5)
 
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
   DeployGateSDK: df3d5838db7e35c05a711c35a3bdeef3c2b016ba
   DropDown: 7f87abecc28f9b4edad810fe1211c5c018c257e5
+  Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
   PromiseKit: 62f37bb4900a9b0b7550d017e41497171d93face
   Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
   RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
 
-PODFILE CHECKSUM: 6f8810e700941296b8663523cee47599e3a5adfe
+PODFILE CHECKSUM: e9949094542c5c1c1a5df0428bcbad4aed84c3d3
 
 COCOAPODS: 1.4.0

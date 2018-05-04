@@ -15,6 +15,7 @@ class RemoteListViewModel: SongsListViewModelProtocol {
         case .vietnamese: return vietnameseList
         case .english: return englishList
         case .thai: return thaiList
+        case .all: return allList
         default: return vietnameseList // error, then return default to vietnameseList
         }
     }
@@ -29,6 +30,10 @@ class RemoteListViewModel: SongsListViewModelProtocol {
     
     var thaiList: [Song] {
         return repository.list.filter("ngonngu = %d", SongLanguage.thai.rawValue).compactMap { $0 }
+    }
+    
+    var allList: [Song] {
+        return repository.list.compactMap { $0 }
     }
     
     var dataUpdateClosure: ((ViewState) -> ())?

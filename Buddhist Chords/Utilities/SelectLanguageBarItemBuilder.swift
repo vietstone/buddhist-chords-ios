@@ -12,7 +12,7 @@ import DropDown
 final class SelectLanguageBarItemBuilder {
     private static var dropDown = DropDown()
     
-    static func getItem(with action: SelectLanguageProtocol) -> UIBarButtonItem {
+    static func buildItem(selectLanguageAction action: SelectLanguageProtocol) -> UIBarButtonItem {
         // 3 things to care: action, title, setting
         let userSetting = UserDefaults.standard
         let languageSetting = userSetting.integer(forKey: AppConfig.languageUserDefaultsSettingKey) // default is 0, to Vietnamese

@@ -8,24 +8,12 @@
 
 import Foundation
 
-enum SongLanguage: Int, CustomStringConvertible {
+enum SongLanguage: Int {
     case vietnamese = 0
     case english = 1
     case thai = 2
+    case all = 1001
     case unknown = -100
-    
-    var description: String {
-        switch self {
-        case .vietnamese:
-            return "Tiếng Việt"
-        case .english:
-            return "English"
-        case .thai:
-            return "ภาษาไทย"
-        case .unknown:
-            return "####"
-        }
-    }
     
     var settingDescription: String {
         switch self {
@@ -35,6 +23,8 @@ enum SongLanguage: Int, CustomStringConvertible {
             return "🇺🇸 English"
         case .thai:
             return "🇹🇭 ภาษาไทย"
+        case .all:
+            return "   🇻🇳🇺🇸🇹🇭   "
         case .unknown:
             return "####"
         }

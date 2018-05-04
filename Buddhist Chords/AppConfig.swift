@@ -9,6 +9,6 @@
 import Foundation
 
 final class AppConfig {
-    static let appLanguages: [SongLanguage] = [.vietnamese, .english, .thai]
+    static let appLanguages: [SongLanguage] = [.all, .vietnamese, .english, .thai]
     static let languageUserDefaultsSettingKey = "language"
 }

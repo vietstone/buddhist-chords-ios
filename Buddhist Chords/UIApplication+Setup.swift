@@ -17,7 +17,7 @@ extension UIApplication {
         let remoteVM = RemoteListViewModel()
         let remoteList = SongsListViewController(viewModel: remoteVM)
         remoteList.title = remoteTitle
-        remoteList.navigationItem.rightBarButtonItem = SelectLanguageBarItemBuilder.getItem(with: remoteVM)
+        remoteList.navigationItem.rightBarButtonItem = UIBarButtonItem.selectLanguageItem(action: remoteVM)
         remoteList.tabBarItem = UITabBarItem(title: remoteTitle, image: #imageLiteral(resourceName: "tabbar_new"), tag: 0)
         
         let favoriteTitle = NSLocalizedString("Favorited", comment: "Favorited List Name")

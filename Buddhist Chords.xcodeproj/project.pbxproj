@@ -32,6 +32,7 @@
 		65D5540B20907B87005D96C6 /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D5540A20907B87005D96C6 /* UIAlertController+.swift */; };
 		65D5540D20908E49005D96C6 /* UIBarButtonItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D5540C20908E49005D96C6 /* UIBarButtonItem+.swift */; };
 		65D55410209096BE005D96C6 /* SelectLanguageBarItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D5540F209096BE005D96C6 /* SelectLanguageBarItemBuilder.swift */; };
+		65E5B3E42092B65C0040BD48 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65E5B3E22092B65C0040BD48 /* InfoPlist.strings */; };
 		65F588B42081F19200883B78 /* SongLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F588B32081F19200883B78 /* SongLanguage.swift */; };
 		65F588B62081F6CA00883B78 /* RemoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F588B52081F6CA00883B78 /* RemoteListViewModel.swift */; };
 		65F588B82081F6D800883B78 /* FavoriteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F588B72081F6D800883B78 /* FavoriteListViewModel.swift */; };
@@ -93,6 +94,7 @@
 		65D5540A20907B87005D96C6 /* UIAlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
 		65D5540C20908E49005D96C6 /* UIBarButtonItem+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+.swift"; sourceTree = "<group>"; };
 		65D5540F209096BE005D96C6 /* SelectLanguageBarItemBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageBarItemBuilder.swift; sourceTree = "<group>"; };
+		65E5B3E32092B65C0040BD48 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65F588B32081F19200883B78 /* SongLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongLanguage.swift; sourceTree = "<group>"; };
 		65F588B52081F6CA00883B78 /* RemoteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteListViewModel.swift; sourceTree = "<group>"; };
 		65F588B72081F6D800883B78 /* FavoriteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewModel.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				659D3AB9207BB052001EB2F8 /* Assets.xcassets */,
 				659D3ABB207BB052001EB2F8 /* LaunchScreen.storyboard */,
 				659D3ABE207BB052001EB2F8 /* Info.plist */,
+				65E5B3E22092B65C0040BD48 /* InfoPlist.strings */,
 				65CF614E20917171003AD55A /* Localizable.strings */,
 			);
 			path = "Buddhist Chords";
@@ -427,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				659D3ABD207BB052001EB2F8 /* LaunchScreen.storyboard in Resources */,
+				65E5B3E42092B65C0040BD48 /* InfoPlist.strings in Resources */,
 				65307F2020824B3A005983D3 /* SongTableCell.xib in Resources */,
 				65CF615020917171003AD55A /* Localizable.strings in Resources */,
 				659D3ABA207BB052001EB2F8 /* Assets.xcassets in Resources */,
@@ -698,6 +702,14 @@
 				6573AD952091729E004171EC /* vi */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		65E5B3E22092B65C0040BD48 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65E5B3E32092B65C0040BD48 /* vi */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

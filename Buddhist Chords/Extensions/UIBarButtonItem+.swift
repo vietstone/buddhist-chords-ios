@@ -13,7 +13,11 @@ extension UIBarButtonItem {
         return UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
-    static func selectLanguageItem(action: SelectLanguageProtocol) -> UIBarButtonItem {
-        return SelectLanguageBarItemBuilder.buildItem(selectLanguageAction: action)
+    static func selectLanguageItem(withSelectAction action: SelectLanguageProtocol) -> UIBarButtonItem {
+        return BarButtonItemBuilder.buildSelectLanguageItem(withSelectAction: action)
+    }
+    
+    static var searchItem: UIBarButtonItem {
+        return BarButtonItemBuilder.buildSearchItem()
     }
 }

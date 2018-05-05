@@ -10,7 +10,7 @@ import UIKit
 
 class SongsListViewController: UITableViewController {
     
-    private var viewModel: SongsListViewModelProtocol!
+    var viewModel: SongsListViewModelProtocol!
     
     convenience init(viewModel: SongsListViewModelProtocol) {
         self.init()
@@ -22,7 +22,7 @@ class SongsListViewController: UITableViewController {
         }
     }
     
-    private func handle(viewState: ViewState) { // TODO: complement this function's logic
+    func handle(viewState: ViewState) {
         switch viewState {
         case .blank:
             break

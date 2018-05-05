@@ -9,17 +9,21 @@
 import Foundation
 import DropDown
 
-final class SelectLanguageBarItemBuilder {
-    private static var dropDown = DropDown()
+final class BarButtonItemBuilder {
     
-    static func buildItem(selectLanguageAction action: SelectLanguageProtocol) -> UIBarButtonItem {
+    // MARK: - Select Language Item
+    private static var dropDown = DropDown()
+    @objc private static func onLanguageTap() {
+        dropDown.show()
+    }
+    static func buildSelectLanguageItem(withSelectAction action: SelectLanguageProtocol) -> UIBarButtonItem {
         // 3 things to care: action, title, setting
         let userSetting = UserDefaults.standard
         let languageSetting = userSetting.integer(forKey: AppConfig.languageUserDefaultsSettingKey) // default is 0, to Vietnamese
         let currentLanguage = SongLanguage(rawValue: languageSetting) ?? .unknown
         
         let barItem = UIBarButtonItem(title: currentLanguage.settingDescription,
-                                      style: .plain, target: self, action: #selector(onTap))
+                                      style: .plain, target: self, action: #selector(onLanguageTap))
         action.select(language: currentLanguage)
         
         let appLanguages = AppConfig.appLanguages
@@ -36,8 +40,15 @@ final class SelectLanguageBarItemBuilder {
         
         return barItem
     }
-    
-    @objc private static func onTap() {
-        dropDown.show()
+
+    // MARK: - Search Item
+    @objc private static func onSearchTap() {
+        if let topVC = UIApplication.topViewController() {
+            let searchVC = UIApplication.setupSearchVC()
+            topVC.present(searchVC, animated: false, completion: nil)
+        }
+    }
+    static func buildSearchItem() -> UIBarButtonItem {
+        return UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(onSearchTap))
     }
 }

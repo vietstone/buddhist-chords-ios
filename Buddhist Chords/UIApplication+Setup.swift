@@ -17,13 +17,15 @@ extension UIApplication {
         let remoteVM = RemoteListViewModel()
         let remoteList = SongsListViewController(viewModel: remoteVM)
         remoteList.title = remoteTitle
-        remoteList.navigationItem.rightBarButtonItem = UIBarButtonItem.selectLanguageItem(action: remoteVM)
+        remoteList.navigationItem.rightBarButtonItem = UIBarButtonItem.selectLanguageItem(withSelectAction: remoteVM)
+        remoteList.navigationItem.leftBarButtonItem = UIBarButtonItem.searchItem
         remoteList.tabBarItem = UITabBarItem(title: remoteTitle, image: #imageLiteral(resourceName: "tabbar_new"), tag: 0)
         
         let favoriteTitle = NSLocalizedString("Favorited", comment: "Favorited List Name")
         let favoriteVM = FavoriteListViewModel()
         let favoriteList = SongsListViewController(viewModel: favoriteVM)
         favoriteList.title = favoriteTitle
+        favoriteList.navigationItem.leftBarButtonItem = UIBarButtonItem.searchItem
         favoriteList.tabBarItem = UITabBarItem(title: favoriteTitle, image: #imageLiteral(resourceName: "tabbar_favorite"), tag: 1)
         
         let tabbarVC = UITabBarController()
@@ -35,6 +37,14 @@ extension UIApplication {
         return tabbarVC
     }
     
+    static func setupSearchVC() -> UIViewController {
+        let viewModel = SearchViewModel()
+        let search = SearchViewController(viewModel: viewModel)
+        let naviVC = UINavigationController(rootViewController: search)
+        
+        return naviVC
+    }
+    
     static func appUIConfig() {
         UINavigationBar.appearance().barTintColor = UIColor(r: 76, g: 134, b: 191)
         UINavigationBar.appearance().tintColor = .white
@@ -43,10 +53,35 @@ extension UIApplication {
         UITabBar.appearance().barTintColor = UIColor(r: 76, g: 134, b: 191)
         UITabBar.appearance().tintColor = .white
         UITabBar.appearance().unselectedItemTintColor = .lightGray
+        
+        UISearchBar.appearance().barTintColor = .red
+        UISearchBar.appearance().tintColor = .white
     }
     
     static func launchConfig() {
         DropDown.startListeningToKeyboard()
         Fabric.with([Crashlytics.self])
+    }
+}
+
+// Utility
+extension UIApplication {
+    static func topViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        if let nav = base as? UINavigationController {
+            return topViewController(base: nav.visibleViewController)
+        }
+        if let tab = base as? UITabBarController {
+            if let selected = tab.selectedViewController {
+                return topViewController(base: selected)
+            }
+        }
+        if let presented = base?.presentedViewController {
+            return topViewController(base: presented)
+        }
+        return base
+    }
+    
+    static func currentNavigationController() -> UINavigationController? {
+        return topViewController()?.navigationController
     }
 }

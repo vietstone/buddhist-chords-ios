@@ -10,7 +10,12 @@ import Foundation
 
 class SearchViewModel: SongsListViewModelProtocol {
     var list: [Song] {
-        return repo.list.compactMap { $0 } // TODO: filter
+        // NSPredicate(format: "color = %@ AND name BEGINSWITH %@", "tan", "B")
+        var predicate = NSPredicate(value: true)
+        if let filterText = filterText, filterText.count != 0 {
+            predicate = NSPredicate(format: "tieude contains[cd] %@", filterText)
+        }
+        return repo.list.filter(predicate).compactMap { $0 } // TODO: filter
     }
     
     var dataUpdateClosure: ((ViewState) -> ())?
@@ -21,6 +26,8 @@ class SearchViewModel: SongsListViewModelProtocol {
     init() {
         repo = SongsRepository()
     }
+    
+    var canFetch: Bool { return false }
     
     func fetch() { // No use, just here for protocol
     }

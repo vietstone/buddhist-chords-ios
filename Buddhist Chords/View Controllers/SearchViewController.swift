@@ -14,6 +14,7 @@ class SearchViewController: SongsListViewController, UISearchBarDelegate {
     
     convenience init(viewModel: SearchViewModel) {
         self.init()
+        self.modalTransitionStyle = .crossDissolve
         self.viewModel = viewModel
         self.viewModel.dataUpdateClosure = { [weak self] (viewState) in
             DispatchQueue.main.async {
@@ -39,13 +40,6 @@ class SearchViewController: SongsListViewController, UISearchBarDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        searchBar.becomeFirstResponder()
-        searchBar.setShowsCancelButton(true, animated: true)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
         // TextField Color Customization
         let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
         textFieldInsideSearchBar?.textColor = UIColor.white
@@ -60,15 +54,36 @@ class SearchViewController: SongsListViewController, UISearchBarDelegate {
         let clearButton = textFieldInsideSearchBar?.value(forKey: "clearButton") as! UIButton
         clearButton.setImage(clearButton.imageView?.image?.withRenderingMode(.alwaysTemplate), for: .normal)
         clearButton.tintColor = UIColor.white
+        
+        // Active the search bar
+        searchBar.becomeFirstResponder()
+        searchBar.setShowsCancelButton(true, animated: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        searchBar.resignFirstResponder()
     }
     
     // MARK: - UISearchBarDelegate
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        self.dismiss(animated: false, completion: nil)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        // TODO
+        if let vm = viewModel as? SearchViewModel {
+            vm.filter(with: searchText)
+        }
     }
 }

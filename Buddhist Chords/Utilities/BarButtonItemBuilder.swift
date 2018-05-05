@@ -45,7 +45,7 @@ final class BarButtonItemBuilder {
     @objc private static func onSearchTap() {
         if let topVC = UIApplication.topViewController() {
             let searchVC = UIApplication.setupSearchVC()
-            topVC.present(searchVC, animated: false, completion: nil)
+            topVC.present(searchVC, animated: true, completion: nil)
         }
     }
     static func buildSearchItem() -> UIBarButtonItem {

@@ -29,6 +29,8 @@
 		65A5510E207BB38300F20DC8 /* SongsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5510D207BB38300F20DC8 /* SongsRepository.swift */; };
 		65A55114207BB42800F20DC8 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A55113207BB42800F20DC8 /* AppConfig.swift */; };
 		65CF615020917171003AD55A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65CF614E20917171003AD55A /* Localizable.strings */; };
+		65D30B6E209F558C00CA0A6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65D30B6C209F558C00CA0A6D /* InfoPlist.strings */; };
+		65D30B71209F558C00CA0A6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65D30B6F209F558C00CA0A6D /* InfoPlist.strings */; };
 		65D5540B20907B87005D96C6 /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D5540A20907B87005D96C6 /* UIAlertController+.swift */; };
 		65D5540D20908E49005D96C6 /* UIBarButtonItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D5540C20908E49005D96C6 /* UIBarButtonItem+.swift */; };
 		65D55410209096BE005D96C6 /* BarButtonItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D5540F209096BE005D96C6 /* BarButtonItemBuilder.swift */; };
@@ -94,6 +96,8 @@
 		65A5510D207BB38300F20DC8 /* SongsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsRepository.swift; sourceTree = "<group>"; };
 		65A55113207BB42800F20DC8 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		65CF6151209171F2003AD55A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		65D30B6D209F558C00CA0A6D /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		65D30B70209F558C00CA0A6D /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65D5540A20907B87005D96C6 /* UIAlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
 		65D5540C20908E49005D96C6 /* UIBarButtonItem+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+.swift"; sourceTree = "<group>"; };
 		65D5540F209096BE005D96C6 /* BarButtonItemBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemBuilder.swift; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 			children = (
 				659D3AC7207BB053001EB2F8 /* Buddhist_ChordsTests.swift */,
 				659D3AC9207BB053001EB2F8 /* Info.plist */,
+				65D30B6C209F558C00CA0A6D /* InfoPlist.strings */,
 			);
 			path = "Buddhist ChordsTests";
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 			children = (
 				659D3AD2207BB053001EB2F8 /* Buddhist_ChordsUITests.swift */,
 				659D3AD4207BB053001EB2F8 /* Info.plist */,
+				65D30B6F209F558C00CA0A6D /* InfoPlist.strings */,
 			);
 			path = "Buddhist ChordsUITests";
 			sourceTree = "<group>";
@@ -453,6 +459,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D30B6E209F558C00CA0A6D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +467,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D30B71209F558C00CA0A6D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,6 +736,22 @@
 				6573AD952091729E004171EC /* vi */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		65D30B6C209F558C00CA0A6D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65D30B6D209F558C00CA0A6D /* vi */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		65D30B6F209F558C00CA0A6D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65D30B70209F558C00CA0A6D /* vi */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		65E5B3E22092B65C0040BD48 /* InfoPlist.strings */ = {

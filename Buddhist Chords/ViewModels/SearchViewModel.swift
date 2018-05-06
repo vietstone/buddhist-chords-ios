@@ -15,7 +15,7 @@ class SearchViewModel: SongsListViewModelProtocol {
         if let filterText = filterText, filterText.count != 0 {
             predicate = NSPredicate(format: "tieude contains[cd] %@", filterText)
         }
-        return repo.list.filter(predicate).compactMap { $0 } // TODO: filter
+        return repo.list.filter(predicate).compactMap { $0 }
     }
     
     var dataUpdateClosure: ((ViewState) -> ())?

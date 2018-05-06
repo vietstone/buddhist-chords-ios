@@ -29,6 +29,12 @@ class SearchViewController: SongsListViewController, UISearchBarDelegate {
         searchBar.searchBarStyle = .minimal
         searchBar.delegate = self
         navigationItem.titleView = searchBar
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(pressCancel))
+    }
+    
+    @objc private func pressCancel() {
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -40,7 +46,7 @@ class SearchViewController: SongsListViewController, UISearchBarDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // TextField Color Customization
+        // Textfield color customization
         let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
         textFieldInsideSearchBar?.textColor = UIColor.white
         
@@ -57,13 +63,6 @@ class SearchViewController: SongsListViewController, UISearchBarDelegate {
         
         // Active the search bar
         searchBar.becomeFirstResponder()
-        searchBar.setShowsCancelButton(true, animated: true)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -72,10 +71,6 @@ class SearchViewController: SongsListViewController, UISearchBarDelegate {
     }
     
     // MARK: - UISearchBarDelegate
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()

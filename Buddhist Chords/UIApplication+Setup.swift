@@ -34,6 +34,12 @@ extension UIApplication {
             UINavigationController(rootViewController: favoriteList)
         ]
         
+        if #available(iOS 10, *) {
+            // ok, nothing
+        } else {
+            extraTabbarConfigForiOSBelow10(tabbar: tabbarVC.tabBar)
+        }
+        
         return tabbarVC
     }
     
@@ -50,9 +56,17 @@ extension UIApplication {
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
+        let tabColorNormal = UIColor.lightGray
+        let tabColorHighlight = UIColor.white
         UITabBar.appearance().barTintColor = UIColor(r: 76, g: 134, b: 191)
-        UITabBar.appearance().tintColor = .white
-        UITabBar.appearance().unselectedItemTintColor = .lightGray
+        UITabBar.appearance().tintColor = tabColorHighlight
+        if #available(iOS 10, *) {
+            UITabBar.appearance().unselectedItemTintColor = tabColorNormal
+        } else {
+            // show sad face emoji
+            UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : tabColorNormal], for: .normal)
+            UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : tabColorHighlight], for: .selected)
+        }
         
         UISearchBar.appearance().barTintColor = .red
         UISearchBar.appearance().tintColor = .white
@@ -83,5 +97,18 @@ extension UIApplication {
     
     static func currentNavigationController() -> UINavigationController? {
         return topViewController()?.navigationController
+    }
+}
+
+extension UIApplication {
+    private static func extraTabbarConfigForiOSBelow10(tabbar: UITabBar) {
+        guard let items = tabbar.items else {
+            return
+        }
+        let tabColorNormal = UIColor.lightGray
+        for item in items {
+            // .with(color: tabColorNormal)
+            item.image = item.selectedImage?.with(color: tabColorNormal)?.withRenderingMode(.alwaysOriginal)
+        }
     }
 }

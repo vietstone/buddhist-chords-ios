@@ -40,6 +40,7 @@
 		65F588BE2081F9DE00883B78 /* SongsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F588BD2081F9DE00883B78 /* SongsListViewController.swift */; };
 		65FE95EB209E03DD00647887 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FE95EA209E03DD00647887 /* SearchViewController.swift */; };
 		65FE95ED209E03F700647887 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FE95EC209E03F700647887 /* SearchViewModel.swift */; };
+		65FE95EF209E9A1F00647887 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FE95EE209E9A1F00647887 /* UIImage+.swift */; };
 		B906CE83E4C34D11D0F3A9A3 /* Pods_Buddhist_Chords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BF17FE306ABEB8916D4324 /* Pods_Buddhist_Chords.framework */; };
 		C0B9B6DF4EA5797358278FA4 /* Pods_Buddhist_ChordsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1F26C729712317DC6C6496 /* Pods_Buddhist_ChordsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -104,6 +105,7 @@
 		65F588BD2081F9DE00883B78 /* SongsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsListViewController.swift; sourceTree = "<group>"; };
 		65FE95EA209E03DD00647887 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		65FE95EC209E03F700647887 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		65FE95EE209E9A1F00647887 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		6D3EC3BCC4B7AE57A5398645 /* Pods-Buddhist Chords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buddhist Chords.release.xcconfig"; path = "Pods/Target Support Files/Pods-Buddhist Chords/Pods-Buddhist Chords.release.xcconfig"; sourceTree = "<group>"; };
 		A3BF17FE306ABEB8916D4324 /* Pods_Buddhist_Chords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Buddhist_Chords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39746B72D6FB97012F9754F /* Pods-Buddhist Chords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buddhist Chords.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Buddhist Chords/Pods-Buddhist Chords.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				65D5540A20907B87005D96C6 /* UIAlertController+.swift */,
 				65D5540C20908E49005D96C6 /* UIBarButtonItem+.swift */,
 				65013CF8209159F800149006 /* InitializeExtensions.swift */,
+				65FE95EE209E9A1F00647887 /* UIImage+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -664,6 +667,7 @@
 				65A23F25208260C500B67A0A /* UIApplication+Setup.swift in Sources */,
 				65F588BE2081F9DE00883B78 /* SongsListViewController.swift in Sources */,
 				65A23F272082662600B67A0A /* SongViewController.swift in Sources */,
+				65FE95EF209E9A1F00647887 /* UIImage+.swift in Sources */,
 				65F588BC2081F95C00883B78 /* ChordsAPI.swift in Sources */,
 				65307F1C20824AEC005983D3 /* SongTableCell.swift in Sources */,
 			);
@@ -863,7 +867,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = D326JWPLAC;
 				INFOPLIST_FILE = "Buddhist Chords/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -885,7 +889,7 @@
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = D326JWPLAC;
 				INFOPLIST_FILE = "Buddhist Chords/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

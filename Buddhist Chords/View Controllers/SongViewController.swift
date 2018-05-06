@@ -38,12 +38,19 @@ class SongViewController: UIViewController {
         webView = WKWebView()
         webView.translatesAutoresizingMaskIntoConstraints = false
         self.webViewContainer.addSubview(webView)
+        
         NSLayoutConstraint.activate([
             webView.topAnchor.constraint(equalTo: self.webViewContainer.topAnchor),
             webView.leftAnchor.constraint(equalTo: self.webViewContainer.leftAnchor),
             webView.bottomAnchor.constraint(equalTo: self.webViewContainer.bottomAnchor),
             webView.rightAnchor.constraint(equalTo: self.webViewContainer.rightAnchor)
             ])
+        
+        if #available(iOS 11, *) {
+            // ok, nothing
+        } else {
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
     }
 
 }

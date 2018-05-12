@@ -10,7 +10,7 @@ import UIKit
 
 class SongsListViewController: UITableViewController {
     
-    var viewModel: SongsListViewModelProtocol!
+    private(set) var viewModel: SongsListViewModelProtocol!
     
     convenience init(viewModel: SongsListViewModelProtocol) {
         self.init()
@@ -20,9 +20,16 @@ class SongsListViewController: UITableViewController {
                 self?.handle(viewState: viewState)
             }
         }
+        
+        // give a chance for subclasses to do their things
+        lastInit()
     }
     
-    func handle(viewState: ViewState) {
+    func lastInit() {
+        // For subclassing
+    }
+    
+    private func handle(viewState: ViewState) {
         switch viewState {
         case .blank:
             break

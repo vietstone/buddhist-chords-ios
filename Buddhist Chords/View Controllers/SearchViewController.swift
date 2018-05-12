@@ -12,15 +12,8 @@ class SearchViewController: SongsListViewController, UISearchBarDelegate {
     
     private var searchBar = UISearchBar()
     
-    convenience init(viewModel: SearchViewModel) {
-        self.init()
+    override func lastInit() {
         self.modalTransitionStyle = .crossDissolve
-        self.viewModel = viewModel
-        self.viewModel.dataUpdateClosure = { [weak self] (viewState) in
-            DispatchQueue.main.async {
-                self?.handle(viewState: viewState)
-            }
-        }
     }
 
     private func configureUI() {

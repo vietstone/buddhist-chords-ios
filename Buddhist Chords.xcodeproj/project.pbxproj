@@ -14,7 +14,7 @@
 		6509C033208E49CC00AD77EF /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6509C032208E49CC00AD77EF /* URL+.swift */; };
 		65307F1C20824AEC005983D3 /* SongTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65307F1B20824AEC005983D3 /* SongTableCell.swift */; };
 		65307F2020824B3A005983D3 /* SongTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65307F1F20824B3A005983D3 /* SongTableCell.xib */; };
-		65638A0A2090385400BE04D1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65638A092090385400BE04D1 /* Common.swift */; };
+		65638A0A2090385400BE04D1 /* CommonDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65638A092090385400BE04D1 /* CommonDefines.swift */; };
 		65638A0C209060A500BE04D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65638A0B209060A500BE04D1 /* User.swift */; };
 		659D3AB3207BB051001EB2F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659D3AB2207BB051001EB2F8 /* AppDelegate.swift */; };
 		659D3AB8207BB051001EB2F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659D3AB6207BB051001EB2F8 /* Main.storyboard */; };
@@ -74,7 +74,7 @@
 		6509C032208E49CC00AD77EF /* URL+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
 		65307F1B20824AEC005983D3 /* SongTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableCell.swift; sourceTree = "<group>"; };
 		65307F1F20824B3A005983D3 /* SongTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableCell.xib; sourceTree = "<group>"; };
-		65638A092090385400BE04D1 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		65638A092090385400BE04D1 /* CommonDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDefines.swift; sourceTree = "<group>"; };
 		65638A0B209060A500BE04D1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6573AD952091729E004171EC /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		659D3AAF207BB051001EB2F8 /* Buddhist Chords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Buddhist Chords.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,7 +226,7 @@
 				659D3AB2207BB051001EB2F8 /* AppDelegate.swift */,
 				65A23F24208260C500B67A0A /* UIApplication+Setup.swift */,
 				65A55113207BB42800F20DC8 /* AppConfig.swift */,
-				65638A092090385400BE04D1 /* Common.swift */,
+				65638A092090385400BE04D1 /* CommonDefines.swift */,
 				65F588B22081F02100883B78 /* View Controllers */,
 				65307F1920824AAB005983D3 /* Views */,
 				65F588B12081F01800883B78 /* ViewModels */,
@@ -656,7 +656,7 @@
 			files = (
 				65F588B42081F19200883B78 /* SongLanguage.swift in Sources */,
 				6509C02E208E483B00AD77EF /* RealmConfig.swift in Sources */,
-				65638A0A2090385400BE04D1 /* Common.swift in Sources */,
+				65638A0A2090385400BE04D1 /* CommonDefines.swift in Sources */,
 				6509C02F208E483B00AD77EF /* SongResponse.swift in Sources */,
 				65013CF9209159F800149006 /* InitializeExtensions.swift in Sources */,
 				65A5510E207BB38300F20DC8 /* SongsRepository.swift in Sources */,

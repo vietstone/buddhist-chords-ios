@@ -1,5 +1,5 @@
 //
-//  Protocols.swift
+//  CommonDefines.swift
 //  Buddhist Chords
 //
 //  Created by Viet Nguyen Tran on 4/25/18.

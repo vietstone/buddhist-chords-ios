@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import SafariServices
 
 class SongViewController: UIViewController {
     private var webView: WKWebView!
@@ -61,6 +62,18 @@ class SongViewController: UIViewController {
         chordsLabel.text = NSLocalizedString("On/off chords", comment: "")
         updateCheckBoxImage()
         chordsButton.addTarget(self, action: #selector(dummyHandleCheckbox), for: .touchUpInside)
+        
+        // Mp3
+        let listenButton = UIBarButtonItem(title: NSLocalizedString("Listen", comment: ""), style: .plain, target: self, action: #selector(openMp3))
+        navigationItem.rightBarButtonItem = listenButton
+    }
+    
+    @objc func openMp3() {
+        let link = "http://data17.chiasenhac.com/downloads/1039/0/1038064-720f3451/128/Moi%20Ngay%20Toi%20Chon%20Mot%20Niem%20Vui%20-%20Hong%20Nh%20[128kbps_MP3].mp3"
+        if let url = URL(string: link) {
+            let vc = SFSafariViewController(url: url)
+            present(vc, animated: true)
+        }
     }
     
     @objc private func dummyHandleCheckbox() {

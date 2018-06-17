@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lUR-3g-sNw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lUR-3g-sNw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -37,17 +37,45 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0h-df-v6p">
+                                <rect key="frame" x="0.0" y="20" width="375" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81A-aL-1yc">
+                                        <rect key="frame" x="315" y="15" width="40" height="40"/>
+                                        <state key="normal" image="unchecked_box"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chords" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLi-tm-vjw">
+                                        <rect key="frame" x="257" y="27" width="50" height="18"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="81A-aL-1yc" secondAttribute="trailing" constant="20" id="YFU-Vf-lyg"/>
+                                    <constraint firstItem="oLi-tm-vjw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i0h-df-v6p" secondAttribute="leading" constant="20" symbolic="YES" id="ZOq-IY-uEK"/>
+                                    <constraint firstAttribute="height" constant="70" id="Zck-Oi-akL"/>
+                                    <constraint firstItem="oLi-tm-vjw" firstAttribute="centerY" secondItem="i0h-df-v6p" secondAttribute="centerY" id="jnh-5I-RgD"/>
+                                    <constraint firstItem="81A-aL-1yc" firstAttribute="leading" secondItem="oLi-tm-vjw" secondAttribute="trailing" constant="8" id="kRP-gR-4pq"/>
+                                    <constraint firstItem="81A-aL-1yc" firstAttribute="centerY" secondItem="i0h-df-v6p" secondAttribute="centerY" id="oAE-Es-DWR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="i0h-df-v6p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Qy-Ib-dm2"/>
+                            <constraint firstItem="i0h-df-v6p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6dE-Nl-nGF"/>
                             <constraint firstItem="eJ1-iM-vnt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7y8-3j-sI3"/>
                             <constraint firstItem="eJ1-iM-vnt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8uY-FU-zsK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eJ1-iM-vnt" secondAttribute="trailing" id="BNa-lG-ibh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eJ1-iM-vnt" secondAttribute="bottom" id="Bo5-08-5EH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i0h-df-v6p" secondAttribute="trailing" id="NRY-LA-AuV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="chordsButton" destination="81A-aL-1yc" id="aL6-RP-KtB"/>
+                        <outlet property="chordsLabel" destination="oLi-tm-vjw" id="Kzy-vr-Ufy"/>
                         <outlet property="webViewContainer" destination="eJ1-iM-vnt" id="rUE-Yq-oOu"/>
                     </connections>
                 </viewController>
@@ -56,4 +84,7 @@
             <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="unchecked_box" width="40" height="40"/>
+    </resources>
 </document>

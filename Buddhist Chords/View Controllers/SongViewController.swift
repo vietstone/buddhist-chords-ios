@@ -12,6 +12,11 @@ import WebKit
 class SongViewController: UIViewController {
     private var webView: WKWebView!
     @IBOutlet weak var webViewContainer: UIView!
+    @IBOutlet weak var chordsLabel: UILabel!
+    @IBOutlet weak var chordsButton: UIButton!
+    
+    // dummy
+    var isChecked = false
     
     private var song: Song?
     
@@ -50,6 +55,22 @@ class SongViewController: UIViewController {
         let displayContent = wrapperContent.replacingOccurrences(of: "<----------body---------->", with: songContent)
         
         webView.loadHTMLString(displayContent, baseURL: nil)
+        
+        
+        // Chords handle
+        chordsLabel.text = NSLocalizedString("On/off chords", comment: "")
+        updateCheckBoxImage()
+        chordsButton.addTarget(self, action: #selector(dummyHandleCheckbox), for: .touchUpInside)
+    }
+    
+    @objc private func dummyHandleCheckbox() {
+        isChecked = !isChecked
+        updateCheckBoxImage()
+    }
+    
+    private func updateCheckBoxImage() {
+        let image = isChecked ? #imageLiteral(resourceName: "checked_box") : #imageLiteral(resourceName: "unchecked_box")
+        chordsButton.setImage(image, for: .normal)
     }
     
     private func initView() {

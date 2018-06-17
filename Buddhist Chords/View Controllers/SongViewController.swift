@@ -15,6 +15,20 @@ class SongViewController: UIViewController {
     
     private var song: Song?
     
+    static var wrapperContent: String {
+        guard let filepath = Bundle.main.path(forResource: "wrapper", ofType: "html") else {
+            assert(false, "Wrong opening file wrapper.html")
+            return ""
+        }
+        
+        guard let content = try? String(contentsOfFile: filepath) else {
+            assert(false, "Wrong loading content from wrapper.html")
+            return ""
+        }
+        
+        return content
+    }
+    
     static func createViewVC(with song: Song) -> SongViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "SongViewController") as? SongViewController else {
@@ -30,7 +44,12 @@ class SongViewController: UIViewController {
         
         initView()
         title = song?.name
-        webView.loadHTMLString(song?.content ?? "", baseURL: nil)
+        
+        let wrapperContent = SongViewController.wrapperContent
+        let songContent = song?.content ?? ""
+        let displayContent = wrapperContent.replacingOccurrences(of: "<----------body---------->", with: songContent)
+        
+        webView.loadHTMLString(displayContent, baseURL: nil)
     }
     
     private func initView() {

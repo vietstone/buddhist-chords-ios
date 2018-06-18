@@ -12,6 +12,9 @@ protocol Song {
     var name: String { get }
     var language: SongLanguage { get }
     var content: String { get }
+    var contentWithChords: String? { get }
+    var mp3Link: String? { get }
+    
     var contentPreview: String { get }
     var isFavorited: Bool { get }
     func toggleFavorite()

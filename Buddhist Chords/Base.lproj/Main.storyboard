@@ -45,7 +45,7 @@
                                         <state key="normal" image="unchecked_box"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chords" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLi-tm-vjw">
-                                        <rect key="frame" x="257" y="27" width="50" height="18"/>
+                                        <rect key="frame" x="257" y="26" width="50" height="18"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -76,6 +76,7 @@
                     <connections>
                         <outlet property="chordsButton" destination="81A-aL-1yc" id="aL6-RP-KtB"/>
                         <outlet property="chordsLabel" destination="oLi-tm-vjw" id="Kzy-vr-Ufy"/>
+                        <outlet property="topControlsView" destination="i0h-df-v6p" id="gMW-xy-S5X"/>
                         <outlet property="webViewContainer" destination="eJ1-iM-vnt" id="rUE-Yq-oOu"/>
                     </connections>
                 </viewController>

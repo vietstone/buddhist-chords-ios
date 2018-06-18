@@ -32,6 +32,9 @@ class SongResponse : Object, Decodable {
     @objc dynamic var created_at : String?
     @objc dynamic var updated_at : String?
     @objc dynamic var ngonngu: Int = 0
+    @objc dynamic var loibai_gam: String?
+    @objc dynamic var mp3_link: String?
+    
     @objc dynamic var isFavorite: Bool = false
 
     // MARK: - For Decodable
@@ -42,6 +45,8 @@ class SongResponse : Object, Decodable {
 		case created_at = "created_at"
 		case updated_at = "updated_at"
 		case ngonngu = "ngonngu"
+        case loibai_gam = "loibai_gam"
+        case mp3_link = "mp3_link"
 	}
 
     required init(from decoder: Decoder) throws {
@@ -53,6 +58,8 @@ class SongResponse : Object, Decodable {
 		created_at = try values.decodeIfPresent(String.self, forKey: .created_at)
 		updated_at = try values.decodeIfPresent(String.self, forKey: .updated_at)
 		ngonngu = try values.decodeIfPresent(Int.self, forKey: .ngonngu) ?? 0
+        loibai_gam = try values.decodeIfPresent(String.self, forKey: .loibai_gam)
+        mp3_link = try values.decodeIfPresent(String.self, forKey: .mp3_link)
 	}
     
     // MARK: - For Realm
@@ -91,6 +98,8 @@ extension SongResponse {
         self.created_at = anotherSong.created_at
         self.updated_at = anotherSong.updated_at
         self.ngonngu = anotherSong.ngonngu
+        self.loibai_gam = anotherSong.loibai_gam
+        self.mp3_link = anotherSong.mp3_link
     }
 }
 
@@ -105,6 +114,14 @@ extension SongResponse: Song {
     
     var content: String {
         return loibai ?? ""
+    }
+    
+    var contentWithChords: String? {
+        return loibai_gam
+    }
+    
+    var mp3Link: String? {
+        return mp3_link
     }
     
     var contentPreview: String {

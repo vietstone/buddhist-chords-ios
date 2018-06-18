@@ -13,11 +13,12 @@ import SafariServices
 class SongViewController: UIViewController {
     private var webView: WKWebView!
     @IBOutlet weak var webViewContainer: UIView!
+    
+    @IBOutlet weak var topControlsView: UIView!
     @IBOutlet weak var chordsLabel: UILabel!
     @IBOutlet weak var chordsButton: UIButton!
     
-    // dummy
-    var isChecked = false
+    var isDisplayingChords = false
     
     private var song: Song?
     
@@ -51,39 +52,57 @@ class SongViewController: UIViewController {
         initView()
         title = song?.name
         
-        let wrapperContent = SongViewController.wrapperContent
-        let songContent = song?.content ?? ""
-        let displayContent = wrapperContent.replacingOccurrences(of: "<----------body---------->", with: songContent)
-        
-        webView.loadHTMLString(displayContent, baseURL: nil)
-        
-        
-        // Chords handle
-        chordsLabel.text = NSLocalizedString("On/off chords", comment: "")
-        updateCheckBoxImage()
-        chordsButton.addTarget(self, action: #selector(dummyHandleCheckbox), for: .touchUpInside)
-        
-        // Mp3
-        let listenButton = UIBarButtonItem(title: NSLocalizedString("Listen", comment: ""), style: .plain, target: self, action: #selector(openMp3))
-        navigationItem.rightBarButtonItem = listenButton
+        updateControls()
+        updateWebviewContent()
     }
     
-    @objc func openMp3() {
-        let link = "http://data17.chiasenhac.com/downloads/1039/0/1038064-720f3451/128/Moi%20Ngay%20Toi%20Chon%20Mot%20Niem%20Vui%20-%20Hong%20Nh%20[128kbps_MP3].mp3"
-        if let url = URL(string: link) {
-            let vc = SFSafariViewController(url: url)
-            present(vc, animated: true)
+    private func updateControls() {
+        // Chords
+        if let _ = song?.contentWithChords {
+            topControlsView.isHidden = false
+            chordsLabel.text = NSLocalizedString("On/off chords", comment: "")
+            chordsButton.addTarget(self, action: #selector(handleChangeChordsCheckbox), for: .touchUpInside)
+            updateChordsCheckBoxImage()
+        } else {
+            topControlsView.isHidden = true
+        }
+        
+        // Mp3
+        if let _ = song?.mp3Link {
+            let listenButton = UIBarButtonItem(title: NSLocalizedString("Listen", comment: ""), style: .plain, target: self, action: #selector(openMp3))
+            navigationItem.rightBarButtonItem = listenButton
         }
     }
     
-    @objc private func dummyHandleCheckbox() {
-        isChecked = !isChecked
-        updateCheckBoxImage()
+    @objc func openMp3() {
+        if let mp3Link = song?.mp3Link {
+            if let url = URL(string: mp3Link) {
+                let vc = SFSafariViewController(url: url)
+                present(vc, animated: true)
+            }
+        }
     }
     
-    private func updateCheckBoxImage() {
-        let image = isChecked ? #imageLiteral(resourceName: "checked_box") : #imageLiteral(resourceName: "unchecked_box")
+    @objc private func handleChangeChordsCheckbox() {
+        isDisplayingChords = !isDisplayingChords
+        updateChordsCheckBoxImage()
+        updateWebviewContent()
+    }
+    
+    private func updateChordsCheckBoxImage() {
+        let image = isDisplayingChords ? #imageLiteral(resourceName: "checked_box") : #imageLiteral(resourceName: "unchecked_box")
         chordsButton.setImage(image, for: .normal)
+    }
+    
+    private func updateWebviewContent() {
+        let content = song?.content ?? ""
+        let contentWithChords = song?.contentWithChords ?? ""
+        let contentToDisplay = isDisplayingChords ? contentWithChords : content
+        
+        let wrapperContent = SongViewController.wrapperContent
+        let displayContent = wrapperContent.replacingOccurrences(of: "<----------body---------->", with: contentToDisplay)
+        
+        webView.loadHTMLString(displayContent, baseURL: nil)
     }
     
     private func initView() {

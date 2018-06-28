@@ -21,19 +21,19 @@ class RemoteListViewModel: SongsListViewModelProtocol {
     }
     
     var vietnameseList: [Song] {
-        return repository.list.filter("ngonngu = %d", SongLanguage.vietnamese.rawValue).compactMap { $0 }
+        return repository.list.filter("ngonngu = %d", SongLanguage.vietnamese.rawValue).sorted(byKeyPath: "tieude").compactMap { $0 }
     }
     
     var englishList: [Song] {
-        return repository.list.filter("ngonngu = %d", SongLanguage.english.rawValue).compactMap { $0 }
+        return repository.list.filter("ngonngu = %d", SongLanguage.english.rawValue).sorted(byKeyPath: "tieude").compactMap { $0 }
     }
     
     var thaiList: [Song] {
-        return repository.list.filter("ngonngu = %d", SongLanguage.thai.rawValue).compactMap { $0 }
+        return repository.list.filter("ngonngu = %d", SongLanguage.thai.rawValue).sorted(byKeyPath: "tieude").compactMap { $0 }
     }
     
     var allList: [Song] {
-        return repository.list.compactMap { $0 }
+        return repository.list.sorted(byKeyPath: "tieude").compactMap { $0 }
     }
     
     var dataUpdateClosure: ((ViewState) -> ())?

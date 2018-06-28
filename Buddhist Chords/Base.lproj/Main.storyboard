@@ -51,6 +51,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="81A-aL-1yc" secondAttribute="trailing" constant="20" id="YFU-Vf-lyg"/>
                                     <constraint firstItem="oLi-tm-vjw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i0h-df-v6p" secondAttribute="leading" constant="20" symbolic="YES" id="ZOq-IY-uEK"/>

@@ -68,10 +68,9 @@ class SongViewController: UIViewController {
         }
         
         // Mp3
-        if let _ = song?.mp3Link {
-            let listenButton = UIBarButtonItem(title: NSLocalizedString("Listen", comment: ""), style: .plain, target: self, action: #selector(openMp3))
-            navigationItem.rightBarButtonItem = listenButton
-        }
+        let listenButton = UIBarButtonItem(title: NSLocalizedString("Listen", comment: ""), style: .plain, target: self, action: #selector(openMp3))
+        navigationItem.rightBarButtonItem = listenButton
+        listenButton.isEnabled = (song?.mp3Link != nil)
     }
     
     @objc func openMp3() {
@@ -100,7 +99,10 @@ class SongViewController: UIViewController {
         let contentToDisplay = isDisplayingChords ? contentWithChords : content
         
         let wrapperContent = SongViewController.wrapperContent
-        let displayContent = wrapperContent.replacingOccurrences(of: "<----------body---------->", with: contentToDisplay)
+        var displayContent = wrapperContent.replacingOccurrences(of: "<----------body---------->", with: contentToDisplay)
+        
+        let topMargin = (song?.contentWithChords != nil) ? 70 : 20
+        displayContent = displayContent.replacingOccurrences(of: "<----------margin-top---------->", with: "\(topMargin)")
         
         webView.loadHTMLString(displayContent, baseURL: nil)
     }

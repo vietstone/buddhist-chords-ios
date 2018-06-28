@@ -9,11 +9,11 @@ PODS:
     - Alamofire (~> 4.0)
     - PromiseKit/CorePromise
   - PromiseKit/CorePromise (6.2.3)
-  - Realm (3.5.0):
-    - Realm/Headers (= 3.5.0)
-  - Realm/Headers (3.5.0)
-  - RealmSwift (3.5.0):
-    - Realm (= 3.5.0)
+  - Realm (3.7.2):
+    - Realm/Headers (= 3.7.2)
+  - Realm/Headers (3.7.2)
+  - RealmSwift (3.7.2):
+    - Realm (= 3.7.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -22,7 +22,7 @@ DEPENDENCIES:
   - DropDown (~> 2.0)
   - Fabric
   - PromiseKit/Alamofire (~> 6.0)
-  - RealmSwift (~> 3.5)
+  - RealmSwift (~> 3.7)
 
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
@@ -31,9 +31,9 @@ SPEC CHECKSUMS:
   DropDown: 7f87abecc28f9b4edad810fe1211c5c018c257e5
   Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
   PromiseKit: 62f37bb4900a9b0b7550d017e41497171d93face
-  Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
-  RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
+  Realm: dd18c3014e8d90df300b83c6da740067436089c5
+  RealmSwift: 79917cae59a0c43ef8118b233a5978891dd50b4a
 
-PODFILE CHECKSUM: e9949094542c5c1c1a5df0428bcbad4aed84c3d3
+PODFILE CHECKSUM: f9a21967a476d328d348e167642f7955e9d834a2
 
 COCOAPODS: 1.4.0
